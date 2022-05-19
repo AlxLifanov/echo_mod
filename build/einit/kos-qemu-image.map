@@ -1,0 +1,284 @@
+
+Discarded input sections
+
+ .eh_frame_hdr  0x0000000000000000        0x0 /opt/KasperskyOS-Community-Edition-1.1.0.204/sysroot-aarch64-kos/../libexec/aarch64-kos/kos-qemu
+ .comment       0x0000000000000000      0x7a9 /opt/KasperskyOS-Community-Edition-1.1.0.204/sysroot-aarch64-kos/../libexec/aarch64-kos/kos-qemu
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /opt/KasperskyOS-Community-Edition-1.1.0.204/sysroot-aarch64-kos/../libexec/aarch64-kos/kos-qemu
+LOAD /tmp/tmp.jBPn2K2AgQ
+LOAD /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/lib/gcc/aarch64-kos/9.2.1/libgcc.a
+                0x0000000082000000                . = 0x82000000
+                0x0000000082000000                _begin = .
+                0x0000000082000000                . = ALIGN (0x1000)
+
+.text           0x0000000082000000     0x7000
+ *(.bootheader)
+ .bootheader    0x0000000082000000       0xa0 /opt/KasperskyOS-Community-Edition-1.1.0.204/sysroot-aarch64-kos/../libexec/aarch64-kos/kos-qemu
+                0x0000000082000000                Entry
+ *(.text)
+ .text          0x00000000820000a0     0x69f8 /opt/KasperskyOS-Community-Edition-1.1.0.204/sysroot-aarch64-kos/../libexec/aarch64-kos/kos-qemu
+                0x00000000820000a0                BootGetPfn
+                0x00000000820000e0                PageTableGetPfn
+                0x00000000820000f0                PrepareLoaderInfo
+                0x0000000082000140                FreeLoaderInfo
+                0x00000000820001e0                BootStartupSecondaryCores
+                0x00000000820001f0                BootInitSecondaryCores
+                0x0000000082000200                BootInitSmpSoc
+                0x0000000082000210                BootInitConsole
+                0x0000000082000240                BootFinitConsole
+                0x0000000082000260                BootDie
+                0x00000000820002a0                PrepareKernel
+                0x0000000082000710                PrepareEntropy
+                0x0000000082000780                PrepareStackGuard
+                0x00000000820007d0                PrepareRomfs
+                0x0000000082000820                BootEntry
+                0x0000000082000930                PreparePageTables
+                0x0000000082000bc0                BootDumpPhysMap
+                0x0000000082000bd0                BootCreateMapItem
+                0x0000000082000bf0                DiagConsoleInit
+                0x0000000082000c00                DiagConsoleFinit
+                0x0000000082000c10                BootInitPeriphery
+                0x0000000082000c40                PrepareTrampoline
+                0x0000000082000f80                BootInitMapping
+                0x0000000082000ff0                BootMapPages
+                0x0000000082001050                PrepareModules
+                0x0000000082001070                ElfEntry
+                0x00000000820010a0                InitPhysMap
+                0x0000000082001130                ParseBootloaderArguments
+                0x0000000082001140                InitCpu
+                0x0000000082001150                SetupArchFlags
+                0x0000000082001170                HalMakePteContentEx
+                0x00000000820011d0                HalMakePteContent
+                0x0000000082001220                HalCheckCpuFeatures
+                0x0000000082001260                HalDumpCpuFeatures
+                0x00000000820012a0                HalShowCpuCacheMode
+                0x0000000082001310                HalGetCpuCacheInfo
+                0x00000000820016f0                FbConsoleGetInfo
+                0x0000000082001700                ConsoleInit
+                0x0000000082001760                ConsoleGetPos
+                0x0000000082001780                ConsoleRemap
+                0x0000000082001c30                HalAllocPhysMem
+                0x0000000082001d40                HalOccupyMemRegion
+                0x0000000082001d60                HalFreeMemRegion
+                0x0000000082001d80                HalGetMemPermByType
+                0x0000000082001ea0                HalGetMemRegionPerm
+                0x0000000082001f00                HalGetMemRegionType
+                0x0000000082001f60                HalIsPageValid
+                0x00000000820020b0                HalInitDiagUart
+                0x0000000082002130                HalUartSelectDevice
+                0x0000000082002170                GenericTimerBootInit
+                0x0000000082002180                GicGetDistributorBase
+                0x0000000082002190                GicWrite32
+                0x00000000820021a0                GicRead32
+                0x00000000820021b0                GicWriteDist32
+                0x00000000820021d0                GicWriteDist64
+                0x00000000820021f0                GicReadDist32
+                0x0000000082002210                GicReadDist64
+                0x0000000082002230                GicSetupInterruptsSecurity
+                0x0000000082002290                GicBootInit
+                0x00000000820022a0                HalGetPhysMap
+                0x00000000820022b0                BootInitSoc
+                0x00000000820022c0                PL01xInit
+                0x00000000820023f0                PL01xDone
+                0x0000000082002460                PL01xGetChar
+                0x00000000820024b0                PL01xPutChar
+                0x00000000820024f0                PL01xFlush
+                0x0000000082002560                PL01xSetInterruptMode
+                0x00000000820025c0                PL01xHasData
+                0x00000000820025f0                RtlInitDiag
+                0x0000000082002630                RtlOutDiagStringEx
+                0x0000000082002720                RtlOutDiagString
+                0x0000000082002730                RtlAddDiagDevice
+                0x00000000820027a0                RtlCloseDiagDevices
+                0x0000000082002830                RtlLockDiagBuf
+                0x0000000082002870                RtlMoveDiagBuf
+                0x00000000820028c0                RtlFlushDiagBuffers
+                0x0000000082002a00                RtlFindFirstBit
+                0x0000000082002a20                RtlFindNextBit
+                0x0000000082002a40                RtlFindFirstZeroBit
+                0x0000000082002a60                RtlFindNextZeroBit
+                0x0000000082002a80                RtlSetBitState
+                0x0000000082002ab0                RtlClearBitState
+                0x0000000082002ae0                RtlGetBitState
+                0x0000000082002b00                RtlSetBitRange
+                0x0000000082002be0                RtlClearBitRange
+                0x0000000082002cd0                rtl_rand
+                0x0000000082002d00                rtl_srand
+                0x0000000082002f10                rtl_rb_tree_init
+                0x0000000082002f20                rtl_rb_tree_find_node
+                0x0000000082002f90                rtl_rb_tree_find_node_geq
+                0x0000000082003010                rtl_rb_tree_find_node_leq
+                0x0000000082003090                rtl_rb_tree_insert_node
+                0x0000000082003280                rtl_rb_tree_iterate
+                0x0000000082003300                rtl_rb_tree_remove_node
+                0x0000000082003540                rtl_snprintf
+                0x0000000082003590                rtl_printf
+                0x00000000820035e0                rtl_memcpy
+                0x0000000082003600                rtl_memccpy
+                0x0000000082003630                rtl_memmove
+                0x0000000082003680                rtl_memchr
+                0x00000000820036c0                rtl_memset
+                0x00000000820036e0                rtl_memset32
+                0x0000000082003700                rtl_memset64
+                0x0000000082003720                rtl_memcmp
+                0x0000000082003760                rtl_strcmp
+                0x00000000820037a0                rtl_strncmp
+                0x00000000820037e0                rtl_strcpy
+                0x0000000082003820                rtl_strncpy
+                0x0000000082003860                rtl_strcat
+                0x00000000820038a0                rtl_strncat
+                0x00000000820038f0                rtl_strchr
+                0x0000000082003920                rtl_strrchr
+                0x0000000082003950                rtl_strpbrk
+                0x0000000082003990                rtl_strspn
+                0x00000000820039e0                rtl_strcspn
+                0x0000000082003a30                rtl_strstr
+                0x0000000082003a80                rtl_strlen
+                0x0000000082003ab0                rtl_strnlen
+                0x0000000082003af0                rtl_strtok_r
+                0x0000000082003b80                RtlRomfsSet
+                0x0000000082003b90                RtlRomfsReset
+                0x0000000082003ba0                RtlRomfsOpenFile
+                0x0000000082003c50                RtlRomfsGetFileSize
+                0x0000000082003c90                RtlRomfsGetFileBase
+                0x0000000082003cd0                RtlRomfsGetFileId
+                0x0000000082003d00                RtlRomfsCountFiles
+                0x0000000082003d20                RtlRomfsOpenFileByIndex
+                0x0000000082003d50                RtlRomfsGetFileName
+                0x0000000082003e10                RtlRomfsGetBase
+                0x0000000082003e20                RtlRomfsGetFsSize
+                0x0000000082003e30                RtlRomfsCheckImage
+                0x0000000082003fc0                RtlRomfsCheckImageStr
+                0x0000000082003fe0                rtl_strtoll
+                0x0000000082004190                rtl_strtoull
+                0x0000000082004350                rtl_vprintf
+                0x00000000820043c0                rtl_vsnprintf
+                0x0000000082005220                rtl_vsscanf
+                0x0000000082005ce0                rtl_sscanf
+                0x0000000082005d30                RtlCallConstructors
+                0x0000000082005de0                RtlCallDestructors
+                0x0000000082005e40                RtlHashFnv1a32Blob
+                0x0000000082005e90                RtlHashFnv1a32String
+                0x0000000082005ed0                RtlHashFnv1a32StringN
+                0x0000000082005f20                RtlHashFnv1a64Blob
+                0x0000000082005f80                RtlHashFnv1a64String
+                0x0000000082005fc0                RtlHashFnv1a64StringN
+                0x0000000082006550                RtlRandomInit
+                0x0000000082006710                RtlRandomGet
+                0x0000000082006770                RtlRandomSeed
+                0x00000000820067c0                RtlRandomMemSanitize
+                0x00000000820067e0                __assert_func
+                0x0000000082006830                panic
+                0x00000000820068e0                raise
+                0x00000000820068f0                printk
+                0x0000000082006940                coprintk
+ .text          0x0000000082006a98        0x0 /tmp/tmp.jBPn2K2AgQ
+ *(.text.*)
+ *(.stub)
+                0x0000000082007000                . = ALIGN (0x1000)
+ *fill*         0x0000000082006a98      0x568 
+                0x0000000082007000                . = ALIGN (0x1000)
+
+.boot           0x0000000082007000     0x2000
+                0x0000000082007000                __BootTextBegin = .
+ *(.boot.text)
+ .boot.text     0x0000000082007000      0x320 /opt/KasperskyOS-Community-Edition-1.1.0.204/sysroot-aarch64-kos/../libexec/aarch64-kos/kos-qemu
+                0x0000000082007000                InvalidateTLB
+                0x0000000082007010                InvalidateCaches
+                0x00000000820070a0                StartKernelMp
+                0x00000000820070b0                PrepareKernelEntry
+                0x0000000082007120                StartKernel
+                0x0000000082007240                JoinSmp
+                0x0000000082007320                __BootTextEnd = .
+                0x0000000082008000                . = ALIGN (0x1000)
+ *fill*         0x0000000082007320      0xce0 
+                0x0000000082008000                __BootDataBegin = .
+ *(.boot.data)
+                0x0000000082008000                . = ALIGN (0x8)
+                0x0000000082008000                __BootReleasedDataBegin = .
+                0x0000000082008001                . = (. + 0x1)
+ *fill*         0x0000000082008000        0x1 
+                0x0000000082009000                . = ALIGN (0x1000)
+ *fill*         0x0000000082008001      0xfff 
+                0x0000000082009000                __BootDataEnd = .
+ *(.boot.rodata)
+ *(.boot.bss)
+                0x0000000082009000                . = ALIGN (0x1000)
+                0x0000000082009000                . = ALIGN (0x1000)
+
+.data           0x0000000082009000     0x3000
+ *(.data)
+ .data          0x0000000082009000     0x2d90 /opt/KasperskyOS-Community-Edition-1.1.0.204/sysroot-aarch64-kos/../libexec/aarch64-kos/kos-qemu
+                0x0000000082009100                InitialStackSize
+                0x0000000082009108                fbConsole
+                0x0000000082009148                uniFixed16Size
+                0x0000000082009150                uniFixed16Psf
+                0x000000008200bc08                uartHw
+ .data          0x000000008200bd90        0x0 /tmp/tmp.jBPn2K2AgQ
+ *(.data.rel)
+ *(.data.rel.local)
+ *(.got.plt)
+ *(.got)
+ *(.sdata)
+                0x000000008200c000                . = ALIGN (0x1000)
+ *fill*         0x000000008200bd90      0x270 
+                0x000000008200c000                . = ALIGN (0x1000)
+
+.rodata         0x000000008200c000   0x272000
+ *(.rodata)
+ .rodata        0x000000008200c000    0x59d84 /opt/KasperskyOS-Community-Edition-1.1.0.204/sysroot-aarch64-kos/../libexec/aarch64-kos/kos-qemu
+                0x000000008200c000                kernelImageBegin
+                0x0000000082065458                kernelImageEnd
+                0x0000000082065468                translationLevelPattern4Kb
+ *(.rodata.*)
+ *fill*         0x0000000082065d84        0x4 
+ .rodata.str1.8
+                0x0000000082065d88      0x3e0 /opt/KasperskyOS-Community-Edition-1.1.0.204/sysroot-aarch64-kos/../libexec/aarch64-kos/kos-qemu
+                                        0x410 (size before relaxing)
+ .rodata.cst8   0x0000000082066168       0x38 /opt/KasperskyOS-Community-Edition-1.1.0.204/sysroot-aarch64-kos/../libexec/aarch64-kos/kos-qemu
+ *(.data.rel.ro)
+ *(.data.rel.ro.local)
+                0x0000000082067000                . = ALIGN (0x1000)
+ *fill*         0x00000000820661a0      0xe60 
+                0x0000000082067000                __RomfsBegin = .
+ *(.romfs)
+ .romfs         0x0000000082067000   0x217000 /tmp/tmp.jBPn2K2AgQ
+ *(.romfs.*)
+                0x000000008227e000                __RomfsEnd = .
+                0x000000008227e000                . = ALIGN (0x1000)
+                0x000000000027e000                _imagesize = (. - _begin)
+                0x000000008227e000                . = ALIGN (0x1000)
+
+.bootstub       0x000000008227e000        0x0
+ *(.bootstub)
+                0x000000008227e000                . = ALIGN (0x1000)
+                0x000000008227e000                . = ALIGN (0x1000)
+
+.bss            0x000000008227e000     0xb000
+ *(.bss..page_aligned)
+ *(.dynbss)
+ *(.bss)
+ .bss           0x000000008227e000     0xa1a0 /opt/KasperskyOS-Community-Edition-1.1.0.204/sysroot-aarch64-kos/../libexec/aarch64-kos/kos-qemu
+                0x0000000082280000                InitialStack
+                0x0000000082280028                fbBase
+                0x0000000082280048                realFbBase
+ .bss           0x00000000822881a0        0x0 /tmp/tmp.jBPn2K2AgQ
+ *(COMMON)
+ *(.sbss)
+ *(.scommon)
+                0x0000000082289000                . = ALIGN (0x1000)
+ *fill*         0x00000000822881a0      0xe60 
+                0x0000000082289000                _end = .
+
+/DISCARD/
+ *(.discard)
+ *(.discard.*)
+ *(*)
+OUTPUT(/home/user/echo/build/einit/kos-qemu-image elf64-littleaarch64)

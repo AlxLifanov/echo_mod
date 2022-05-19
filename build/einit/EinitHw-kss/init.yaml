@@ -1,0 +1,14 @@
+entities:
+
+# The `client` entity can call `server`.
+- name: echo.Client
+  connections:
+  - target: echo.Server
+    id: server_connection
+
+
+
+# The `server` entity can only respond to requests.
+- name: echo.Server
+
+
