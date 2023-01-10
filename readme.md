@@ -3,6 +3,7 @@
 ## Purpose
 
 This example is intended for usage with #KasperskyOS PSL educational course - (link TBD).
+It fact it is [a standart SDK example](https://support.kaspersky.ru/help/KCE/1.1/en-US/appendix_echo_example.htm), modified a little bit.
 
 Example functionality details are in [Wiki](https://github.com/AlxLifanov/echo_mod/wiki).
 
