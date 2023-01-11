@@ -3,11 +3,11 @@
 ## Purpose
 
 This example is intended for usage with #KasperskyOS PSL educational course - (link TBD).
-It fact it is [a standart SDK example](https://support.kaspersky.ru/help/KCE/1.1/en-US/appendix_echo_example.htm), modified a little bit.
+It fact it is [a standart SDK example](https://support.kaspersky.ru/help/KCE/1.1/en-US/appendix_echo_example.htm), modified a little bit for readability.
 
 Example functionality details are in [Wiki](https://github.com/AlxLifanov/echo_mod/wiki).
 
-This example was tested with KasperskyOS CE SDK vX.X.X.X.
+This example was tested with KasperskyOS CE SDK v 1.1.0.204.
 
 ## Installation and usage
 1. Prepare developer's machine [according to the manual](https://support.kaspersky.ru/help/KCE/1.1/en-US/getting_started.htm).

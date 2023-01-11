@@ -1,0 +1,16 @@
+@startwbs App build
+* /CMakeLists.txt
+** resources/Ping.idl
+** resources/Ping.cdl
+** resources/Server.edl
+** resources/Client.edl
+** client/CMakeLists.txt
+*** client/src/client.c
+*** ref to Client.edl
+** server/CMakeLists.txt
+*** server/src/server.c
+*** ref to Server.edl
+** einit/CMakeLists.txt
+*** einit/src/init.yaml
+*** einit/src/security.psl
+@endwbs

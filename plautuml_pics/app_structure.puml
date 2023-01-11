@@ -1,0 +1,14 @@
+@startwbs App Structure
+*:project 
+echo;
+**:entity 
+Server;
+***:component
+Ping;
+****:interface
+Ping;
+*****[#green]:method
+Ping();
+**:entity
+Client;
+@endwbs
