@@ -20,3 +20,5 @@ This example was tested with KasperskyOS CE SDK v 1.1.0.204.
 This software is a modified "echo" example from KasperskyOS Community Edition SDK. Distributed "as is" without any liability. All KOS CE SDK original license limitations applied.
 
 All questions can be routed to https://kas.pr/kosforum .
+
+![image](https://mc.yandex.ru/pixel/4800619149800149888?rnd=%aw_random%)
