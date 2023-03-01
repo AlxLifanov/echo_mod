@@ -33,8 +33,8 @@ enum {
 #endif /* NK_USE_UNQUALIFIED_NAMES */
 #endif /* __echo__Client__COMPONENT_ENDPOINTS__ */
 
-#ifndef __echo__Client__ENTITY_ENDPOINTS__
-#define __echo__Client__ENTITY_ENDPOINTS__
+#ifndef __echo__Client__TASK_ENDPOINTS__
+#define __echo__Client__TASK_ENDPOINTS__
 enum {
     echo_Client_entity_req_arena_size =
     echo_Client_component_req_arena_size,
@@ -57,7 +57,7 @@ enum {
 #define Client_entity_res_handles echo_Client_entity_res_handles
 #define Client_entity_err_handles echo_Client_entity_err_handles
 #endif /* NK_USE_UNQUALIFIED_NAMES */
-#endif /* __echo__Client__ENTITY_ENDPOINTS__ */
+#endif /* __echo__Client__TASK_ENDPOINTS__ */
 
 #pragma GCC diagnostic pop
 

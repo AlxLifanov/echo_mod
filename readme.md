@@ -21,4 +21,6 @@ This software is a modified "echo" example from KasperskyOS Community Edition SD
 
 All questions can be routed to https://kas.pr/kosforum .
 
+© 2023 AlxLifanov
+© 2022 AO Kaspersky Lab
 ![image](https://mc.yandex.ru/pixel/4800619149800149888?rnd=%aw_random%)

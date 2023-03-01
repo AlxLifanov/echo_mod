@@ -1,13 +1,12 @@
-#include "kss/types.h"
-#include "kss/audit-gen-api.h"
+#include "kssaudit/decode.h"
 #include "nk/types.h"
 static const nk_size_t psl_segment_bytes_len = 352U;
 #include "kssaudit/machine.h"
-#include "kss/kss.h"
-#include "kssaudit/decode.h"
+#include "kss/audit-gen-api.h"
 #include "kss/audit.h"
-#include "kssaudit/segment.h"
 #include "kssaudit/constants.h"
+#include "kssaudit/segment.h"
+#include "kss/kss.h"
 static const nk_uint8_t psl_segment_bytes[] = {0x02, 0x00, 0x00, 0x80, 0x40,
                                                0x01, 0x00, 0x90, 0x00, 0x00,
                                                0x00, 0x00, 0x20, 0x00, 0x00,
@@ -79,6 +78,7 @@ static const nk_uint8_t psl_segment_bytes[] = {0x02, 0x00, 0x00, 0x80, 0x40,
                                                0x00, 0x00, 0x00, 0x90, 0x00,
                                                0x00, 0x00, 0x00, 0x40, 0x01,
                                                0x00, 0x00};
+#include "kss/types.h"
 nk_err_t __kss_audit_decode(const void *msg, const void *data, char *buf, const
                             nk_size_t size)
 {

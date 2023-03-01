@@ -9,12 +9,12 @@
 
 
 
-static const EntityInfo entityInfo_echo_Client_0 = {
+static const EntityInfo taskInfo_echo_Client1_0 = {
     .eiid = "echo.Client",
     .max_endpoints = 0,
     .endpoints = NK_NULL,
 };
-static const EndpointInfo endpointsInfo_echo_Server_1[2] = {
+static const EndpointInfo endpointsInfo_echo_Server1_1[2] = {
     {
         .name = "echo.Ping.ping",
         .riid = 0,
@@ -26,82 +26,86 @@ static const EndpointInfo endpointsInfo_echo_Server_1[2] = {
         .iface_name = "echo.Ping",
     }
 };
-static const EntityInfo entityInfo_echo_Server_1 = {
+static const EntityInfo taskInfo_echo_Server1_1 = {
     .eiid = "echo.Server",
     .max_endpoints = 2,
-    .endpoints = endpointsInfo_echo_Server_1,
+    .endpoints = endpointsInfo_echo_Server1_1,
 };
 
 /* init entity entry point */
 int main(void) {
-    Entity * entity_echo_Client_0;
-    Entity * entity_echo_Server_1;
 
-    const char * entityInfo_echo_Client_0_args[] = {
-        "Client",
+    Entity * task_echo_Client1_0;
+    Entity * task_echo_Server1_1;
+
+    const char * taskInfo_echo_Client1_0_args[] = {
+        "ClientExec",
         RTL_NULL
     };
-    const char * entityInfo_echo_Server_1_args[] = {
-        "Server",
+    const char * taskInfo_echo_Server1_1_args[] = {
+        "ServerExec",
         RTL_NULL
     };
 
     /* initialize entities */
 
-    entity_echo_Client_0 = EntityInitEx(
-        &entityInfo_echo_Client_0, "echo.Client", "Client"
+    task_echo_Server1_1 = EntityInitEx(
+        &taskInfo_echo_Server1_1, "echo.Server1", "ServerExec"
     );
-    if (!entity_echo_Client_0) {
+    if (!task_echo_Server1_1) {
         fprintf(
-            stderr, "Can't initialize task \"echo.Client\"\n"
+            stderr, "Can't initialize task \"echo.Server1\"\n"
         );
         return EXIT_FAILURE;
     }
 
-    if (EntitySetArgs(entity_echo_Client_0, entityInfo_echo_Client_0_args) != rcOk) {
+    if (EntitySetArgs(task_echo_Server1_1, taskInfo_echo_Server1_1_args) != rcOk) {
         fprintf(
-            stderr, "Can't set args for task \"echo.Client\"\n"
+            stderr, "Can't set args for task \"echo.Server1\"\n"
         );
         return EXIT_FAILURE;
     }
-    entity_echo_Server_1 = EntityInitEx(
-        &entityInfo_echo_Server_1, "echo.Server", "Server"
+    task_echo_Client1_0 = EntityInitEx(
+        &taskInfo_echo_Client1_0, "echo.Client1", "ClientExec"
     );
-    if (!entity_echo_Server_1) {
+    if (!task_echo_Client1_0) {
         fprintf(
-            stderr, "Can't initialize task \"echo.Server\"\n"
+            stderr, "Can't initialize task \"echo.Client1\"\n"
         );
         return EXIT_FAILURE;
     }
 
-    if (EntitySetArgs(entity_echo_Server_1, entityInfo_echo_Server_1_args) != rcOk) {
+    if (EntitySetArgs(task_echo_Client1_0, taskInfo_echo_Client1_0_args) != rcOk) {
         fprintf(
-            stderr, "Can't set args for task \"echo.Server\"\n"
+            stderr, "Can't set args for task \"echo.Client1\"\n"
         );
         return EXIT_FAILURE;
     }
 
     /* setup connections between entities */
 
-    if (EntityConnectToService(entity_echo_Client_0, entity_echo_Server_1, "server_connection") != rcOk) {
+    if (EntityConnectToService(task_echo_Client1_0, task_echo_Server1_1, "server_connection") != rcOk) {
         fprintf(stderr, "Can't setup a connection %s\n", "server_connection");
         return EXIT_FAILURE;
     }
 
+
+
     /* run entities */
 
-    if (EntityRun(entity_echo_Client_0) != rcOk) {
+    if (EntityRun(task_echo_Server1_1) != rcOk) {
         fprintf(
-            stderr, "Can't run task \"echo.Client\"\n"
+            stderr, "Can't run task \"echo.Server1\"\n"
         );
         return EXIT_FAILURE;
     }
-    if (EntityRun(entity_echo_Server_1) != rcOk) {
+    if (EntityRun(task_echo_Client1_0) != rcOk) {
         fprintf(
-            stderr, "Can't run task \"echo.Server\"\n"
+            stderr, "Can't run task \"echo.Client1\"\n"
         );
         return EXIT_FAILURE;
     }
+
 
     return EXIT_SUCCESS;
 }

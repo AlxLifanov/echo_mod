@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/user/echo/build/einit/EinitQemu-kss/EinitQemu.c" "einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.o" "gcc" "einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.o.d"
+  "/home/user/echo_mod/build/einit/EinitQemu-kss/EinitQemu.c" "einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.o" "gcc" "einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.o.d"
   )
 
 # Targets to which this target links.

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/user/echo/build/einit/EinitHw-kss/EinitHw.c" "einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.o" "gcc" "einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.o.d"
+  "/home/user/echo_mod/build/einit/EinitHw-kss/EinitHw.c" "einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.o" "gcc" "einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.o.d"
   )
 
 # Targets to which this target links.

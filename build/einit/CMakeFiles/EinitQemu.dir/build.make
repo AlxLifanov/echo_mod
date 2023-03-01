@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake
+CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake
 
 # The command to remove a file.
-RM = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -E rm -f
+RM = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/echo
+CMAKE_SOURCE_DIR = /home/user/echo_mod
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/echo/build
+CMAKE_BINARY_DIR = /home/user/echo_mod/build
 
 # Include any dependencies generated for this target.
 include einit/CMakeFiles/EinitQemu.dir/depend.make
@@ -70,24 +70,24 @@ include einit/CMakeFiles/EinitQemu.dir/progress.make
 include einit/CMakeFiles/EinitQemu.dir/flags.make
 
 einit/EinitQemu-kss/EinitQemu.c: einit/EinitQemu-kss/init.yaml
-einit/EinitQemu-kss/EinitQemu.c: client/Client
-einit/EinitQemu-kss/EinitQemu.c: server/Server
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EinitQemu-kss/EinitQemu.c"
-	cd /home/user/echo/build/einit && /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/einit -I /home/user/echo/build/_headers_ -I /home/user/echo/build/_headers_/echo/.. -I /home/user/echo/build/../install/include -I /opt/KasperskyOS-Community-Edition-1.1.0.204/sysroot-aarch64-kos/include -I /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/aarch64-kos/include -I /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/include -o /home/user/echo/build/einit/EinitQemu-kss/EinitQemu.c /home/user/echo/build/einit/EinitQemu-kss/init.yaml
+einit/EinitQemu-kss/EinitQemu.c: client/ClientExec
+einit/EinitQemu-kss/EinitQemu.c: server/ServerExec
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EinitQemu-kss/EinitQemu.c"
+	cd /home/user/echo_mod/build/einit && /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/einit -I /home/user/echo_mod/build/_headers_ -I /home/user/echo_mod/build/_headers_/echo/.. -I /home/user/echo_mod/build/../install/include -I /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include -I /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/aarch64-kos/include -I /sysroot-aarch64-kos/include -I /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/include -o /home/user/echo_mod/build/einit/EinitQemu-kss/EinitQemu.c /home/user/echo_mod/build/einit/EinitQemu-kss/init.yaml
 
 einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.o: einit/CMakeFiles/EinitQemu.dir/flags.make
 einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.o: einit/EinitQemu-kss/EinitQemu.c
 einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.o: einit/CMakeFiles/EinitQemu.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.o"
-	cd /home/user/echo/build/einit && /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/aarch64-kos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.o -MF CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.o.d -o CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.o -c /home/user/echo/build/einit/EinitQemu-kss/EinitQemu.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.o"
+	cd /home/user/echo_mod/build/einit && /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/aarch64-kos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.o -MF CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.o.d -o CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.o -c /home/user/echo_mod/build/einit/EinitQemu-kss/EinitQemu.c
 
 einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.i"
-	cd /home/user/echo/build/einit && /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/aarch64-kos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/user/echo/build/einit/EinitQemu-kss/EinitQemu.c > CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.i
+	cd /home/user/echo_mod/build/einit && /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/aarch64-kos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/user/echo_mod/build/einit/EinitQemu-kss/EinitQemu.c > CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.i
 
 einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.s"
-	cd /home/user/echo/build/einit && /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/aarch64-kos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/user/echo/build/einit/EinitQemu-kss/EinitQemu.c -o CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.s
+	cd /home/user/echo_mod/build/einit && /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/aarch64-kos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/user/echo_mod/build/einit/EinitQemu-kss/EinitQemu.c -o CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.s
 
 # Object files for target EinitQemu
 EinitQemu_OBJECTS = \
@@ -99,18 +99,18 @@ EinitQemu_EXTERNAL_OBJECTS =
 einit/EinitQemu: einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.o
 einit/EinitQemu: einit/CMakeFiles/EinitQemu.dir/build.make
 einit/EinitQemu: einit/CMakeFiles/EinitQemu.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable EinitQemu"
-	cd /home/user/echo/build/einit && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/EinitQemu.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable EinitQemu"
+	cd /home/user/echo_mod/build/einit && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/EinitQemu.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 einit/CMakeFiles/EinitQemu.dir/build: einit/EinitQemu
 .PHONY : einit/CMakeFiles/EinitQemu.dir/build
 
 einit/CMakeFiles/EinitQemu.dir/clean:
-	cd /home/user/echo/build/einit && $(CMAKE_COMMAND) -P CMakeFiles/EinitQemu.dir/cmake_clean.cmake
+	cd /home/user/echo_mod/build/einit && $(CMAKE_COMMAND) -P CMakeFiles/EinitQemu.dir/cmake_clean.cmake
 .PHONY : einit/CMakeFiles/EinitQemu.dir/clean
 
 einit/CMakeFiles/EinitQemu.dir/depend: einit/EinitQemu-kss/EinitQemu.c
-	cd /home/user/echo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/echo /home/user/echo/einit /home/user/echo/build /home/user/echo/build/einit /home/user/echo/build/einit/CMakeFiles/EinitQemu.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/echo_mod/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/echo_mod /home/user/echo_mod/einit /home/user/echo_mod/build /home/user/echo_mod/build/einit /home/user/echo_mod/build/einit/CMakeFiles/EinitQemu.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : einit/CMakeFiles/EinitQemu.dir/depend
 

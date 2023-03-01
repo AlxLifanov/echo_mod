@@ -1,14 +1,20 @@
 entities:
 
 # The `client` entity can call `server`.
-- name: echo.Client
+
+# task name path
+- task: echo.Client1                  # process/instance name, but for client's instance name - nodody cares
+  name: echo.Client                   # process class name
+  path: ClientExec                        # executable file name
   connections:
-  - target: echo.Server
+  - target: echo.Server1              # connection should point to exact instance
     id: server_connection
 
 
 
 # The `server` entity can only respond to requests.
-- name: echo.Server
+- task: echo.Server1
+  name: echo.Server
+  path: ServerExec
 
 

@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake
+CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake
 
 # The command to remove a file.
-RM = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -E rm -f
+RM = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/echo
+CMAKE_SOURCE_DIR = /home/user/echo_mod
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/echo/build
+CMAKE_BINARY_DIR = /home/user/echo_mod/build
 
 # Include any dependencies generated for this target.
 include einit/CMakeFiles/EinitQemu-edl.dir/depend.make
@@ -70,8 +70,8 @@ include einit/CMakeFiles/EinitQemu-edl.dir/progress.make
 include einit/CMakeFiles/EinitQemu-edl.dir/flags.make
 
 einit/EinitQemu-kss/Einit.edl.h: einit/EinitQemu-kss/Einit.edl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EinitQemu-kss/Einit.edl.h"
-	cd /home/user/echo/build/einit/EinitQemu-kss && /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/nk-gen-c -I /home/user/echo/build/_headers_ -I /home/user/echo/build/_headers_/echo/.. -I /home/user/echo/build/../install/include -I /opt/KasperskyOS-Community-Edition-1.1.0.204/sysroot-aarch64-kos/include -I /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/aarch64-kos/include -I /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/include -P /opt/KasperskyOS-Community-Edition-1.1.0.204/sysroot-aarch64-kos/include/system.platform -I /home/user/echo/build/_headers_/einit/../kl /home/user/echo/build/einit/EinitQemu-kss/Einit.edl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EinitQemu-kss/Einit.edl.h"
+	cd /home/user/echo_mod/build/einit/EinitQemu-kss && /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/nk-gen-c -I /home/user/echo_mod/build/_headers_ -I /home/user/echo_mod/build/_headers_/echo/.. -I /home/user/echo_mod/build/../install/include -I /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include -I /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/aarch64-kos/include -I /sysroot-aarch64-kos/include -I /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/include -P /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/system.platform -I /home/user/echo_mod/build/_headers_/einit/../kl /home/user/echo_mod/build/einit/EinitQemu-kss/Einit.edl
 
 EinitQemu-edl: einit/CMakeFiles/EinitQemu-edl.dir/build.make
 .PHONY : EinitQemu-edl
@@ -81,10 +81,10 @@ einit/CMakeFiles/EinitQemu-edl.dir/build: EinitQemu-edl
 .PHONY : einit/CMakeFiles/EinitQemu-edl.dir/build
 
 einit/CMakeFiles/EinitQemu-edl.dir/clean:
-	cd /home/user/echo/build/einit && $(CMAKE_COMMAND) -P CMakeFiles/EinitQemu-edl.dir/cmake_clean.cmake
+	cd /home/user/echo_mod/build/einit && $(CMAKE_COMMAND) -P CMakeFiles/EinitQemu-edl.dir/cmake_clean.cmake
 .PHONY : einit/CMakeFiles/EinitQemu-edl.dir/clean
 
 einit/CMakeFiles/EinitQemu-edl.dir/depend: einit/EinitQemu-kss/Einit.edl.h
-	cd /home/user/echo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/echo /home/user/echo/einit /home/user/echo/build /home/user/echo/build/einit /home/user/echo/build/einit/CMakeFiles/EinitQemu-edl.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/echo_mod/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/echo_mod /home/user/echo_mod/einit /home/user/echo_mod/build /home/user/echo_mod/build/einit /home/user/echo_mod/build/einit/CMakeFiles/EinitQemu-edl.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : einit/CMakeFiles/EinitQemu-edl.dir/depend
 

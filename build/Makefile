@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake
+CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake
 
 # The command to remove a file.
-RM = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -E rm -f
+RM = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/echo
+CMAKE_SOURCE_DIR = /home/user/echo_mod
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/echo/build
+CMAKE_BINARY_DIR = /home/user/echo_mod/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/user/echo/build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -97,44 +97,44 @@ list_install_components/fast: list_install_components
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -P cmake_install.cmake
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -P cmake_install.cmake
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles /home/user/echo/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles /home/user/echo_mod/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -160,19 +160,6 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named doc
-
-# Build rule for target.
-doc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 doc
-.PHONY : doc
-
-# fast build rule for target.
-doc/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/doc.dir/build.make CMakeFiles/doc.dir/build
-.PHONY : doc/fast
 
 #=============================================================================
 # Target rules for targets named echo_idl_files
@@ -227,30 +214,30 @@ echo_client_edl_files/fast:
 .PHONY : echo_client_edl_files/fast
 
 #=============================================================================
-# Target rules for targets named Client
+# Target rules for targets named ClientExec
 
 # Build rule for target.
-Client: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Client
-.PHONY : Client
+ClientExec: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ClientExec
+.PHONY : ClientExec
 
 # fast build rule for target.
-Client/fast:
-	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/Client.dir/build.make client/CMakeFiles/Client.dir/build
-.PHONY : Client/fast
+ClientExec/fast:
+	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/ClientExec.dir/build.make client/CMakeFiles/ClientExec.dir/build
+.PHONY : ClientExec/fast
 
 #=============================================================================
-# Target rules for targets named Server
+# Target rules for targets named ServerExec
 
 # Build rule for target.
-Server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Server
-.PHONY : Server
+ServerExec: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ServerExec
+.PHONY : ServerExec
 
 # fast build rule for target.
-Server/fast:
-	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/Server.dir/build.make server/CMakeFiles/Server.dir/build
-.PHONY : Server/fast
+ServerExec/fast:
+	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/ServerExec.dir/build.make server/CMakeFiles/ServerExec.dir/build
+.PHONY : ServerExec/fast
 
 #=============================================================================
 # Target rules for targets named EinitHw-edl
@@ -277,6 +264,19 @@ EinitHw: cmake_check_build_system
 EinitHw/fast:
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw.dir/build.make einit/CMakeFiles/EinitHw.dir/build
 .PHONY : EinitHw/fast
+
+#=============================================================================
+# Target rules for targets named EinitHw-kss-entities-built
+
+# Build rule for target.
+EinitHw-kss-entities-built: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EinitHw-kss-entities-built
+.PHONY : EinitHw-kss-entities-built
+
+# fast build rule for target.
+EinitHw-kss-entities-built/fast:
+	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw-kss-entities-built.dir/build.make einit/CMakeFiles/EinitHw-kss-entities-built.dir/build
+.PHONY : EinitHw-kss-entities-built/fast
 
 #=============================================================================
 # Target rules for targets named EinitHw-kss-makekss-output
@@ -329,6 +329,19 @@ EinitQemu: cmake_check_build_system
 EinitQemu/fast:
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu.dir/build.make einit/CMakeFiles/EinitQemu.dir/build
 .PHONY : EinitQemu/fast
+
+#=============================================================================
+# Target rules for targets named EinitQemu-kss-entities-built
+
+# Build rule for target.
+EinitQemu-kss-entities-built: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EinitQemu-kss-entities-built
+.PHONY : EinitQemu-kss-entities-built
+
+# fast build rule for target.
+EinitQemu-kss-entities-built/fast:
+	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu-kss-entities-built.dir/build.make einit/CMakeFiles/EinitQemu-kss-entities-built.dir/build
+.PHONY : EinitQemu-kss-entities-built/fast
 
 #=============================================================================
 # Target rules for targets named EinitQemu-kss-makekss-output
@@ -408,6 +421,19 @@ gdb/fast:
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/gdb.dir/build.make einit/CMakeFiles/gdb.dir/build
 .PHONY : gdb/fast
 
+#=============================================================================
+# Target rules for targets named cgdb
+
+# Build rule for target.
+cgdb: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cgdb
+.PHONY : cgdb
+
+# fast build rule for target.
+cgdb/fast:
+	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/cgdb.dir/build.make einit/CMakeFiles/cgdb.dir/build
+.PHONY : cgdb/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -420,21 +446,23 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... EinitHw-kss-entities-built"
 	@echo "... EinitHw-kss-makekss-output"
+	@echo "... EinitQemu-kss-entities-built"
 	@echo "... EinitQemu-kss-makekss-output"
-	@echo "... doc"
+	@echo "... cgdb"
 	@echo "... ext_debug"
 	@echo "... gdb"
 	@echo "... gdbsim"
 	@echo "... kos-image"
 	@echo "... kos-qemu-image"
 	@echo "... sim"
-	@echo "... Client"
+	@echo "... ClientExec"
 	@echo "... EinitHw"
 	@echo "... EinitHw-edl"
 	@echo "... EinitQemu"
 	@echo "... EinitQemu-edl"
-	@echo "... Server"
+	@echo "... ServerExec"
 	@echo "... echo_cdl_files"
 	@echo "... echo_client_edl_files"
 	@echo "... echo_idl_files"

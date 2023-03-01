@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake
+CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake
 
 # The command to remove a file.
-RM = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -E rm -f
+RM = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/echo
+CMAKE_SOURCE_DIR = /home/user/echo_mod
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/echo/build
+CMAKE_BINARY_DIR = /home/user/echo_mod/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/user/echo/build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -97,49 +97,49 @@ list_install_components/fast: list_install_components
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -P cmake_install.cmake
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -P cmake_install.cmake
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/user/echo/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles /home/user/echo/build/einit//CMakeFiles/progress.marks
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
+	cd /home/user/echo_mod/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles /home/user/echo_mod/build/einit//CMakeFiles/progress.marks
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/clean
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/preinstall
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/preinstall
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/user/echo/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/user/echo_mod/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 einit/CMakeFiles/EinitHw-edl.dir/rule:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitHw-edl.dir/rule
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitHw-edl.dir/rule
 .PHONY : einit/CMakeFiles/EinitHw-edl.dir/rule
 
 # Convenience name for target.
@@ -172,12 +172,12 @@ EinitHw-edl: einit/CMakeFiles/EinitHw-edl.dir/rule
 
 # fast build rule for target.
 EinitHw-edl/fast:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw-edl.dir/build.make einit/CMakeFiles/EinitHw-edl.dir/build
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw-edl.dir/build.make einit/CMakeFiles/EinitHw-edl.dir/build
 .PHONY : EinitHw-edl/fast
 
 # Convenience name for target.
 einit/CMakeFiles/EinitHw.dir/rule:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitHw.dir/rule
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitHw.dir/rule
 .PHONY : einit/CMakeFiles/EinitHw.dir/rule
 
 # Convenience name for target.
@@ -186,12 +186,26 @@ EinitHw: einit/CMakeFiles/EinitHw.dir/rule
 
 # fast build rule for target.
 EinitHw/fast:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw.dir/build.make einit/CMakeFiles/EinitHw.dir/build
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw.dir/build.make einit/CMakeFiles/EinitHw.dir/build
 .PHONY : EinitHw/fast
 
 # Convenience name for target.
+einit/CMakeFiles/EinitHw-kss-entities-built.dir/rule:
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitHw-kss-entities-built.dir/rule
+.PHONY : einit/CMakeFiles/EinitHw-kss-entities-built.dir/rule
+
+# Convenience name for target.
+EinitHw-kss-entities-built: einit/CMakeFiles/EinitHw-kss-entities-built.dir/rule
+.PHONY : EinitHw-kss-entities-built
+
+# fast build rule for target.
+EinitHw-kss-entities-built/fast:
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw-kss-entities-built.dir/build.make einit/CMakeFiles/EinitHw-kss-entities-built.dir/build
+.PHONY : EinitHw-kss-entities-built/fast
+
+# Convenience name for target.
 einit/CMakeFiles/EinitHw-kss-makekss-output.dir/rule:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitHw-kss-makekss-output.dir/rule
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitHw-kss-makekss-output.dir/rule
 .PHONY : einit/CMakeFiles/EinitHw-kss-makekss-output.dir/rule
 
 # Convenience name for target.
@@ -200,12 +214,12 @@ EinitHw-kss-makekss-output: einit/CMakeFiles/EinitHw-kss-makekss-output.dir/rule
 
 # fast build rule for target.
 EinitHw-kss-makekss-output/fast:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw-kss-makekss-output.dir/build.make einit/CMakeFiles/EinitHw-kss-makekss-output.dir/build
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw-kss-makekss-output.dir/build.make einit/CMakeFiles/EinitHw-kss-makekss-output.dir/build
 .PHONY : EinitHw-kss-makekss-output/fast
 
 # Convenience name for target.
 einit/CMakeFiles/kos-image.dir/rule:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/kos-image.dir/rule
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/kos-image.dir/rule
 .PHONY : einit/CMakeFiles/kos-image.dir/rule
 
 # Convenience name for target.
@@ -214,12 +228,12 @@ kos-image: einit/CMakeFiles/kos-image.dir/rule
 
 # fast build rule for target.
 kos-image/fast:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/kos-image.dir/build.make einit/CMakeFiles/kos-image.dir/build
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/kos-image.dir/build.make einit/CMakeFiles/kos-image.dir/build
 .PHONY : kos-image/fast
 
 # Convenience name for target.
 einit/CMakeFiles/EinitQemu-edl.dir/rule:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitQemu-edl.dir/rule
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitQemu-edl.dir/rule
 .PHONY : einit/CMakeFiles/EinitQemu-edl.dir/rule
 
 # Convenience name for target.
@@ -228,12 +242,12 @@ EinitQemu-edl: einit/CMakeFiles/EinitQemu-edl.dir/rule
 
 # fast build rule for target.
 EinitQemu-edl/fast:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu-edl.dir/build.make einit/CMakeFiles/EinitQemu-edl.dir/build
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu-edl.dir/build.make einit/CMakeFiles/EinitQemu-edl.dir/build
 .PHONY : EinitQemu-edl/fast
 
 # Convenience name for target.
 einit/CMakeFiles/EinitQemu.dir/rule:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitQemu.dir/rule
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitQemu.dir/rule
 .PHONY : einit/CMakeFiles/EinitQemu.dir/rule
 
 # Convenience name for target.
@@ -242,12 +256,26 @@ EinitQemu: einit/CMakeFiles/EinitQemu.dir/rule
 
 # fast build rule for target.
 EinitQemu/fast:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu.dir/build.make einit/CMakeFiles/EinitQemu.dir/build
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu.dir/build.make einit/CMakeFiles/EinitQemu.dir/build
 .PHONY : EinitQemu/fast
 
 # Convenience name for target.
+einit/CMakeFiles/EinitQemu-kss-entities-built.dir/rule:
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitQemu-kss-entities-built.dir/rule
+.PHONY : einit/CMakeFiles/EinitQemu-kss-entities-built.dir/rule
+
+# Convenience name for target.
+EinitQemu-kss-entities-built: einit/CMakeFiles/EinitQemu-kss-entities-built.dir/rule
+.PHONY : EinitQemu-kss-entities-built
+
+# fast build rule for target.
+EinitQemu-kss-entities-built/fast:
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu-kss-entities-built.dir/build.make einit/CMakeFiles/EinitQemu-kss-entities-built.dir/build
+.PHONY : EinitQemu-kss-entities-built/fast
+
+# Convenience name for target.
 einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/rule:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/rule
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/rule
 .PHONY : einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/rule
 
 # Convenience name for target.
@@ -256,12 +284,12 @@ EinitQemu-kss-makekss-output: einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/
 
 # fast build rule for target.
 EinitQemu-kss-makekss-output/fast:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/build.make einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/build
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/build.make einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/build
 .PHONY : EinitQemu-kss-makekss-output/fast
 
 # Convenience name for target.
 einit/CMakeFiles/kos-qemu-image.dir/rule:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/kos-qemu-image.dir/rule
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/kos-qemu-image.dir/rule
 .PHONY : einit/CMakeFiles/kos-qemu-image.dir/rule
 
 # Convenience name for target.
@@ -270,12 +298,12 @@ kos-qemu-image: einit/CMakeFiles/kos-qemu-image.dir/rule
 
 # fast build rule for target.
 kos-qemu-image/fast:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/kos-qemu-image.dir/build.make einit/CMakeFiles/kos-qemu-image.dir/build
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/kos-qemu-image.dir/build.make einit/CMakeFiles/kos-qemu-image.dir/build
 .PHONY : kos-qemu-image/fast
 
 # Convenience name for target.
 einit/CMakeFiles/sim.dir/rule:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/sim.dir/rule
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/sim.dir/rule
 .PHONY : einit/CMakeFiles/sim.dir/rule
 
 # Convenience name for target.
@@ -284,12 +312,12 @@ sim: einit/CMakeFiles/sim.dir/rule
 
 # fast build rule for target.
 sim/fast:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/sim.dir/build.make einit/CMakeFiles/sim.dir/build
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/sim.dir/build.make einit/CMakeFiles/sim.dir/build
 .PHONY : sim/fast
 
 # Convenience name for target.
 einit/CMakeFiles/gdbsim.dir/rule:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/gdbsim.dir/rule
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/gdbsim.dir/rule
 .PHONY : einit/CMakeFiles/gdbsim.dir/rule
 
 # Convenience name for target.
@@ -298,12 +326,12 @@ gdbsim: einit/CMakeFiles/gdbsim.dir/rule
 
 # fast build rule for target.
 gdbsim/fast:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/gdbsim.dir/build.make einit/CMakeFiles/gdbsim.dir/build
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/gdbsim.dir/build.make einit/CMakeFiles/gdbsim.dir/build
 .PHONY : gdbsim/fast
 
 # Convenience name for target.
 einit/CMakeFiles/ext_debug.dir/rule:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/ext_debug.dir/rule
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/ext_debug.dir/rule
 .PHONY : einit/CMakeFiles/ext_debug.dir/rule
 
 # Convenience name for target.
@@ -312,12 +340,12 @@ ext_debug: einit/CMakeFiles/ext_debug.dir/rule
 
 # fast build rule for target.
 ext_debug/fast:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/ext_debug.dir/build.make einit/CMakeFiles/ext_debug.dir/build
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/ext_debug.dir/build.make einit/CMakeFiles/ext_debug.dir/build
 .PHONY : ext_debug/fast
 
 # Convenience name for target.
 einit/CMakeFiles/gdb.dir/rule:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/gdb.dir/rule
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/gdb.dir/rule
 .PHONY : einit/CMakeFiles/gdb.dir/rule
 
 # Convenience name for target.
@@ -326,15 +354,29 @@ gdb: einit/CMakeFiles/gdb.dir/rule
 
 # fast build rule for target.
 gdb/fast:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/gdb.dir/build.make einit/CMakeFiles/gdb.dir/build
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/gdb.dir/build.make einit/CMakeFiles/gdb.dir/build
 .PHONY : gdb/fast
+
+# Convenience name for target.
+einit/CMakeFiles/cgdb.dir/rule:
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/cgdb.dir/rule
+.PHONY : einit/CMakeFiles/cgdb.dir/rule
+
+# Convenience name for target.
+cgdb: einit/CMakeFiles/cgdb.dir/rule
+.PHONY : cgdb
+
+# fast build rule for target.
+cgdb/fast:
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/cgdb.dir/build.make einit/CMakeFiles/cgdb.dir/build
+.PHONY : cgdb/fast
 
 EinitHw-kss/EinitHw.o: EinitHw-kss/EinitHw.c.o
 .PHONY : EinitHw-kss/EinitHw.o
 
 # target to build an object file
 EinitHw-kss/EinitHw.c.o:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw.dir/build.make einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.o
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw.dir/build.make einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.o
 .PHONY : EinitHw-kss/EinitHw.c.o
 
 EinitHw-kss/EinitHw.i: EinitHw-kss/EinitHw.c.i
@@ -342,7 +384,7 @@ EinitHw-kss/EinitHw.i: EinitHw-kss/EinitHw.c.i
 
 # target to preprocess a source file
 EinitHw-kss/EinitHw.c.i:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw.dir/build.make einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.i
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw.dir/build.make einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.i
 .PHONY : EinitHw-kss/EinitHw.c.i
 
 EinitHw-kss/EinitHw.s: EinitHw-kss/EinitHw.c.s
@@ -350,7 +392,7 @@ EinitHw-kss/EinitHw.s: EinitHw-kss/EinitHw.c.s
 
 # target to generate assembly for a file
 EinitHw-kss/EinitHw.c.s:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw.dir/build.make einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.s
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw.dir/build.make einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.s
 .PHONY : EinitHw-kss/EinitHw.c.s
 
 EinitQemu-kss/EinitQemu.o: EinitQemu-kss/EinitQemu.c.o
@@ -358,7 +400,7 @@ EinitQemu-kss/EinitQemu.o: EinitQemu-kss/EinitQemu.c.o
 
 # target to build an object file
 EinitQemu-kss/EinitQemu.c.o:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu.dir/build.make einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.o
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu.dir/build.make einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.o
 .PHONY : EinitQemu-kss/EinitQemu.c.o
 
 EinitQemu-kss/EinitQemu.i: EinitQemu-kss/EinitQemu.c.i
@@ -366,7 +408,7 @@ EinitQemu-kss/EinitQemu.i: EinitQemu-kss/EinitQemu.c.i
 
 # target to preprocess a source file
 EinitQemu-kss/EinitQemu.c.i:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu.dir/build.make einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.i
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu.dir/build.make einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.i
 .PHONY : EinitQemu-kss/EinitQemu.c.i
 
 EinitQemu-kss/EinitQemu.s: EinitQemu-kss/EinitQemu.c.s
@@ -374,7 +416,7 @@ EinitQemu-kss/EinitQemu.s: EinitQemu-kss/EinitQemu.c.s
 
 # target to generate assembly for a file
 EinitQemu-kss/EinitQemu.c.s:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu.dir/build.make einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.s
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu.dir/build.make einit/CMakeFiles/EinitQemu.dir/EinitQemu-kss/EinitQemu.c.s
 .PHONY : EinitQemu-kss/EinitQemu.c.s
 
 # Help Target
@@ -389,8 +431,11 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... EinitHw-kss-entities-built"
 	@echo "... EinitHw-kss-makekss-output"
+	@echo "... EinitQemu-kss-entities-built"
 	@echo "... EinitQemu-kss-makekss-output"
+	@echo "... cgdb"
 	@echo "... ext_debug"
 	@echo "... gdb"
 	@echo "... gdbsim"
@@ -418,6 +463,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/user/echo/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/user/echo_mod/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

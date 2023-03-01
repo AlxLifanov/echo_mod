@@ -45,19 +45,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake
+CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake
 
 # The command to remove a file.
-RM = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -E rm -f
+RM = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/echo
+CMAKE_SOURCE_DIR = /home/user/echo_mod
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/echo/build
+CMAKE_BINARY_DIR = /home/user/echo_mod/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -79,7 +79,6 @@ preinstall: einit/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/doc.dir/clean
 clean: CMakeFiles/echo_idl_files.dir/clean
 clean: CMakeFiles/echo_cdl_files.dir/clean
 clean: CMakeFiles/echo_server_edl_files.dir/clean
@@ -93,7 +92,7 @@ clean: einit/clean
 # Directory level rules for directory client
 
 # Recursive "all" directory target.
-client/all: client/CMakeFiles/Client.dir/all
+client/all: client/CMakeFiles/ClientExec.dir/all
 .PHONY : client/all
 
 # Recursive "preinstall" directory target.
@@ -101,7 +100,7 @@ client/preinstall:
 .PHONY : client/preinstall
 
 # Recursive "clean" directory target.
-client/clean: client/CMakeFiles/Client.dir/clean
+client/clean: client/CMakeFiles/ClientExec.dir/clean
 .PHONY : client/clean
 
 #=============================================================================
@@ -121,23 +120,26 @@ einit/preinstall:
 # Recursive "clean" directory target.
 einit/clean: einit/CMakeFiles/EinitHw-edl.dir/clean
 einit/clean: einit/CMakeFiles/EinitHw.dir/clean
+einit/clean: einit/CMakeFiles/EinitHw-kss-entities-built.dir/clean
 einit/clean: einit/CMakeFiles/EinitHw-kss-makekss-output.dir/clean
 einit/clean: einit/CMakeFiles/kos-image.dir/clean
 einit/clean: einit/CMakeFiles/EinitQemu-edl.dir/clean
 einit/clean: einit/CMakeFiles/EinitQemu.dir/clean
+einit/clean: einit/CMakeFiles/EinitQemu-kss-entities-built.dir/clean
 einit/clean: einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/clean
 einit/clean: einit/CMakeFiles/kos-qemu-image.dir/clean
 einit/clean: einit/CMakeFiles/sim.dir/clean
 einit/clean: einit/CMakeFiles/gdbsim.dir/clean
 einit/clean: einit/CMakeFiles/ext_debug.dir/clean
 einit/clean: einit/CMakeFiles/gdb.dir/clean
+einit/clean: einit/CMakeFiles/cgdb.dir/clean
 .PHONY : einit/clean
 
 #=============================================================================
 # Directory level rules for directory server
 
 # Recursive "all" directory target.
-server/all: server/CMakeFiles/Server.dir/all
+server/all: server/CMakeFiles/ServerExec.dir/all
 .PHONY : server/all
 
 # Recursive "preinstall" directory target.
@@ -145,34 +147,8 @@ server/preinstall:
 .PHONY : server/preinstall
 
 # Recursive "clean" directory target.
-server/clean: server/CMakeFiles/Server.dir/clean
+server/clean: server/CMakeFiles/ServerExec.dir/clean
 .PHONY : server/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/doc.dir
-
-# All Build rule for target.
-CMakeFiles/doc.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/doc.dir/build.make CMakeFiles/doc.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/doc.dir/build.make CMakeFiles/doc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo/build/CMakeFiles --progress-num= "Built target doc"
-.PHONY : CMakeFiles/doc.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/doc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/doc.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
-.PHONY : CMakeFiles/doc.dir/rule
-
-# Convenience name for target.
-doc: CMakeFiles/doc.dir/rule
-.PHONY : doc
-
-# clean rule for target.
-CMakeFiles/doc.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/doc.dir/build.make CMakeFiles/doc.dir/clean
-.PHONY : CMakeFiles/doc.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/echo_idl_files.dir
@@ -181,14 +157,14 @@ CMakeFiles/doc.dir/clean:
 CMakeFiles/echo_idl_files.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/echo_idl_files.dir/build.make CMakeFiles/echo_idl_files.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/echo_idl_files.dir/build.make CMakeFiles/echo_idl_files.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=21,22,23 "Built target echo_idl_files"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=21,22,23 "Built target echo_idl_files"
 .PHONY : CMakeFiles/echo_idl_files.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/echo_idl_files.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/echo_idl_files.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
 .PHONY : CMakeFiles/echo_idl_files.dir/rule
 
 # Convenience name for target.
@@ -207,14 +183,14 @@ CMakeFiles/echo_idl_files.dir/clean:
 CMakeFiles/echo_cdl_files.dir/all: CMakeFiles/echo_idl_files.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/echo_cdl_files.dir/build.make CMakeFiles/echo_cdl_files.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/echo_cdl_files.dir/build.make CMakeFiles/echo_cdl_files.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=15,16,17 "Built target echo_cdl_files"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=15,16,17 "Built target echo_cdl_files"
 .PHONY : CMakeFiles/echo_cdl_files.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/echo_cdl_files.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/echo_cdl_files.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
 .PHONY : CMakeFiles/echo_cdl_files.dir/rule
 
 # Convenience name for target.
@@ -233,14 +209,14 @@ CMakeFiles/echo_cdl_files.dir/clean:
 CMakeFiles/echo_server_edl_files.dir/all: CMakeFiles/echo_cdl_files.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/echo_server_edl_files.dir/build.make CMakeFiles/echo_server_edl_files.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/echo_server_edl_files.dir/build.make CMakeFiles/echo_server_edl_files.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=24,25,26 "Built target echo_server_edl_files"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=24,25,26 "Built target echo_server_edl_files"
 .PHONY : CMakeFiles/echo_server_edl_files.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/echo_server_edl_files.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/echo_server_edl_files.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
 .PHONY : CMakeFiles/echo_server_edl_files.dir/rule
 
 # Convenience name for target.
@@ -259,14 +235,14 @@ CMakeFiles/echo_server_edl_files.dir/clean:
 CMakeFiles/echo_client_edl_files.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/echo_client_edl_files.dir/build.make CMakeFiles/echo_client_edl_files.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/echo_client_edl_files.dir/build.make CMakeFiles/echo_client_edl_files.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=18,19,20 "Built target echo_client_edl_files"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=18,19,20 "Built target echo_client_edl_files"
 .PHONY : CMakeFiles/echo_client_edl_files.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/echo_client_edl_files.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/echo_client_edl_files.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
 .PHONY : CMakeFiles/echo_client_edl_files.dir/rule
 
 # Convenience name for target.
@@ -279,57 +255,57 @@ CMakeFiles/echo_client_edl_files.dir/clean:
 .PHONY : CMakeFiles/echo_client_edl_files.dir/clean
 
 #=============================================================================
-# Target rules for target client/CMakeFiles/Client.dir
+# Target rules for target client/CMakeFiles/ClientExec.dir
 
 # All Build rule for target.
-client/CMakeFiles/Client.dir/all: CMakeFiles/echo_idl_files.dir/all
-client/CMakeFiles/Client.dir/all: CMakeFiles/echo_client_edl_files.dir/all
-	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/Client.dir/build.make client/CMakeFiles/Client.dir/depend
-	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/Client.dir/build.make client/CMakeFiles/Client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=1,2 "Built target Client"
-.PHONY : client/CMakeFiles/Client.dir/all
+client/CMakeFiles/ClientExec.dir/all: CMakeFiles/echo_idl_files.dir/all
+client/CMakeFiles/ClientExec.dir/all: CMakeFiles/echo_client_edl_files.dir/all
+	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/ClientExec.dir/build.make client/CMakeFiles/ClientExec.dir/depend
+	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/ClientExec.dir/build.make client/CMakeFiles/ClientExec.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=1,2 "Built target ClientExec"
+.PHONY : client/CMakeFiles/ClientExec.dir/all
 
 # Build rule for subdir invocation for target.
-client/CMakeFiles/Client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 8
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client/CMakeFiles/Client.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
-.PHONY : client/CMakeFiles/Client.dir/rule
+client/CMakeFiles/ClientExec.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client/CMakeFiles/ClientExec.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
+.PHONY : client/CMakeFiles/ClientExec.dir/rule
 
 # Convenience name for target.
-Client: client/CMakeFiles/Client.dir/rule
-.PHONY : Client
+ClientExec: client/CMakeFiles/ClientExec.dir/rule
+.PHONY : ClientExec
 
 # clean rule for target.
-client/CMakeFiles/Client.dir/clean:
-	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/Client.dir/build.make client/CMakeFiles/Client.dir/clean
-.PHONY : client/CMakeFiles/Client.dir/clean
+client/CMakeFiles/ClientExec.dir/clean:
+	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/ClientExec.dir/build.make client/CMakeFiles/ClientExec.dir/clean
+.PHONY : client/CMakeFiles/ClientExec.dir/clean
 
 #=============================================================================
-# Target rules for target server/CMakeFiles/Server.dir
+# Target rules for target server/CMakeFiles/ServerExec.dir
 
 # All Build rule for target.
-server/CMakeFiles/Server.dir/all: CMakeFiles/echo_server_edl_files.dir/all
-	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/Server.dir/build.make server/CMakeFiles/Server.dir/depend
-	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/Server.dir/build.make server/CMakeFiles/Server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=13,14 "Built target Server"
-.PHONY : server/CMakeFiles/Server.dir/all
+server/CMakeFiles/ServerExec.dir/all: CMakeFiles/echo_server_edl_files.dir/all
+	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/ServerExec.dir/build.make server/CMakeFiles/ServerExec.dir/depend
+	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/ServerExec.dir/build.make server/CMakeFiles/ServerExec.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=13,14 "Built target ServerExec"
+.PHONY : server/CMakeFiles/ServerExec.dir/all
 
 # Build rule for subdir invocation for target.
-server/CMakeFiles/Server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 11
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/CMakeFiles/Server.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
-.PHONY : server/CMakeFiles/Server.dir/rule
+server/CMakeFiles/ServerExec.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 11
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/CMakeFiles/ServerExec.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
+.PHONY : server/CMakeFiles/ServerExec.dir/rule
 
 # Convenience name for target.
-Server: server/CMakeFiles/Server.dir/rule
-.PHONY : Server
+ServerExec: server/CMakeFiles/ServerExec.dir/rule
+.PHONY : ServerExec
 
 # clean rule for target.
-server/CMakeFiles/Server.dir/clean:
-	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/Server.dir/build.make server/CMakeFiles/Server.dir/clean
-.PHONY : server/CMakeFiles/Server.dir/clean
+server/CMakeFiles/ServerExec.dir/clean:
+	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/ServerExec.dir/build.make server/CMakeFiles/ServerExec.dir/clean
+.PHONY : server/CMakeFiles/ServerExec.dir/clean
 
 #=============================================================================
 # Target rules for target einit/CMakeFiles/EinitHw-edl.dir
@@ -338,14 +314,14 @@ server/CMakeFiles/Server.dir/clean:
 einit/CMakeFiles/EinitHw-edl.dir/all:
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw-edl.dir/build.make einit/CMakeFiles/EinitHw-edl.dir/depend
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw-edl.dir/build.make einit/CMakeFiles/EinitHw-edl.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=6 "Built target EinitHw-edl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=6 "Built target EinitHw-edl"
 .PHONY : einit/CMakeFiles/EinitHw-edl.dir/all
 
 # Build rule for subdir invocation for target.
 einit/CMakeFiles/EinitHw-edl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitHw-edl.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
 .PHONY : einit/CMakeFiles/EinitHw-edl.dir/rule
 
 # Convenience name for target.
@@ -361,19 +337,19 @@ einit/CMakeFiles/EinitHw-edl.dir/clean:
 # Target rules for target einit/CMakeFiles/EinitHw.dir
 
 # All Build rule for target.
-einit/CMakeFiles/EinitHw.dir/all: client/CMakeFiles/Client.dir/all
-einit/CMakeFiles/EinitHw.dir/all: server/CMakeFiles/Server.dir/all
+einit/CMakeFiles/EinitHw.dir/all: client/CMakeFiles/ClientExec.dir/all
+einit/CMakeFiles/EinitHw.dir/all: server/CMakeFiles/ServerExec.dir/all
 einit/CMakeFiles/EinitHw.dir/all: einit/CMakeFiles/EinitHw-edl.dir/all
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw.dir/build.make einit/CMakeFiles/EinitHw.dir/depend
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw.dir/build.make einit/CMakeFiles/EinitHw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=3,4,5 "Built target EinitHw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=3,4,5 "Built target EinitHw"
 .PHONY : einit/CMakeFiles/EinitHw.dir/all
 
 # Build rule for subdir invocation for target.
 einit/CMakeFiles/EinitHw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitHw.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
 .PHONY : einit/CMakeFiles/EinitHw.dir/rule
 
 # Convenience name for target.
@@ -386,22 +362,48 @@ einit/CMakeFiles/EinitHw.dir/clean:
 .PHONY : einit/CMakeFiles/EinitHw.dir/clean
 
 #=============================================================================
+# Target rules for target einit/CMakeFiles/EinitHw-kss-entities-built.dir
+
+# All Build rule for target.
+einit/CMakeFiles/EinitHw-kss-entities-built.dir/all: client/CMakeFiles/ClientExec.dir/all
+einit/CMakeFiles/EinitHw-kss-entities-built.dir/all: server/CMakeFiles/ServerExec.dir/all
+einit/CMakeFiles/EinitHw-kss-entities-built.dir/all: einit/CMakeFiles/EinitHw.dir/all
+	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw-kss-entities-built.dir/build.make einit/CMakeFiles/EinitHw-kss-entities-built.dir/depend
+	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw-kss-entities-built.dir/build.make einit/CMakeFiles/EinitHw-kss-entities-built.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num= "Built target EinitHw-kss-entities-built"
+.PHONY : einit/CMakeFiles/EinitHw-kss-entities-built.dir/all
+
+# Build rule for subdir invocation for target.
+einit/CMakeFiles/EinitHw-kss-entities-built.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 20
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitHw-kss-entities-built.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
+.PHONY : einit/CMakeFiles/EinitHw-kss-entities-built.dir/rule
+
+# Convenience name for target.
+EinitHw-kss-entities-built: einit/CMakeFiles/EinitHw-kss-entities-built.dir/rule
+.PHONY : EinitHw-kss-entities-built
+
+# clean rule for target.
+einit/CMakeFiles/EinitHw-kss-entities-built.dir/clean:
+	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw-kss-entities-built.dir/build.make einit/CMakeFiles/EinitHw-kss-entities-built.dir/clean
+.PHONY : einit/CMakeFiles/EinitHw-kss-entities-built.dir/clean
+
+#=============================================================================
 # Target rules for target einit/CMakeFiles/EinitHw-kss-makekss-output.dir
 
 # All Build rule for target.
-einit/CMakeFiles/EinitHw-kss-makekss-output.dir/all: client/CMakeFiles/Client.dir/all
-einit/CMakeFiles/EinitHw-kss-makekss-output.dir/all: server/CMakeFiles/Server.dir/all
-einit/CMakeFiles/EinitHw-kss-makekss-output.dir/all: einit/CMakeFiles/EinitHw.dir/all
+einit/CMakeFiles/EinitHw-kss-makekss-output.dir/all: einit/CMakeFiles/EinitHw-kss-entities-built.dir/all
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw-kss-makekss-output.dir/build.make einit/CMakeFiles/EinitHw-kss-makekss-output.dir/depend
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitHw-kss-makekss-output.dir/build.make einit/CMakeFiles/EinitHw-kss-makekss-output.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=7 "Built target EinitHw-kss-makekss-output"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=7 "Built target EinitHw-kss-makekss-output"
 .PHONY : einit/CMakeFiles/EinitHw-kss-makekss-output.dir/all
 
 # Build rule for subdir invocation for target.
 einit/CMakeFiles/EinitHw-kss-makekss-output.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 21
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitHw-kss-makekss-output.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
 .PHONY : einit/CMakeFiles/EinitHw-kss-makekss-output.dir/rule
 
 # Convenience name for target.
@@ -417,20 +419,21 @@ einit/CMakeFiles/EinitHw-kss-makekss-output.dir/clean:
 # Target rules for target einit/CMakeFiles/kos-image.dir
 
 # All Build rule for target.
-einit/CMakeFiles/kos-image.dir/all: client/CMakeFiles/Client.dir/all
-einit/CMakeFiles/kos-image.dir/all: server/CMakeFiles/Server.dir/all
+einit/CMakeFiles/kos-image.dir/all: client/CMakeFiles/ClientExec.dir/all
+einit/CMakeFiles/kos-image.dir/all: server/CMakeFiles/ServerExec.dir/all
 einit/CMakeFiles/kos-image.dir/all: einit/CMakeFiles/EinitHw.dir/all
+einit/CMakeFiles/kos-image.dir/all: einit/CMakeFiles/EinitHw-kss-entities-built.dir/all
 einit/CMakeFiles/kos-image.dir/all: einit/CMakeFiles/EinitHw-kss-makekss-output.dir/all
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/kos-image.dir/build.make einit/CMakeFiles/kos-image.dir/depend
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/kos-image.dir/build.make einit/CMakeFiles/kos-image.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=28,29 "Built target kos-image"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=28,29 "Built target kos-image"
 .PHONY : einit/CMakeFiles/kos-image.dir/all
 
 # Build rule for subdir invocation for target.
 einit/CMakeFiles/kos-image.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/kos-image.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
 .PHONY : einit/CMakeFiles/kos-image.dir/rule
 
 # Convenience name for target.
@@ -449,14 +452,14 @@ einit/CMakeFiles/kos-image.dir/clean:
 einit/CMakeFiles/EinitQemu-edl.dir/all:
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu-edl.dir/build.make einit/CMakeFiles/EinitQemu-edl.dir/depend
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu-edl.dir/build.make einit/CMakeFiles/EinitQemu-edl.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=11 "Built target EinitQemu-edl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=11 "Built target EinitQemu-edl"
 .PHONY : einit/CMakeFiles/EinitQemu-edl.dir/all
 
 # Build rule for subdir invocation for target.
 einit/CMakeFiles/EinitQemu-edl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitQemu-edl.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
 .PHONY : einit/CMakeFiles/EinitQemu-edl.dir/rule
 
 # Convenience name for target.
@@ -472,19 +475,19 @@ einit/CMakeFiles/EinitQemu-edl.dir/clean:
 # Target rules for target einit/CMakeFiles/EinitQemu.dir
 
 # All Build rule for target.
-einit/CMakeFiles/EinitQemu.dir/all: client/CMakeFiles/Client.dir/all
-einit/CMakeFiles/EinitQemu.dir/all: server/CMakeFiles/Server.dir/all
+einit/CMakeFiles/EinitQemu.dir/all: client/CMakeFiles/ClientExec.dir/all
+einit/CMakeFiles/EinitQemu.dir/all: server/CMakeFiles/ServerExec.dir/all
 einit/CMakeFiles/EinitQemu.dir/all: einit/CMakeFiles/EinitQemu-edl.dir/all
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu.dir/build.make einit/CMakeFiles/EinitQemu.dir/depend
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu.dir/build.make einit/CMakeFiles/EinitQemu.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=8,9,10 "Built target EinitQemu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=8,9,10 "Built target EinitQemu"
 .PHONY : einit/CMakeFiles/EinitQemu.dir/all
 
 # Build rule for subdir invocation for target.
 einit/CMakeFiles/EinitQemu.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitQemu.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
 .PHONY : einit/CMakeFiles/EinitQemu.dir/rule
 
 # Convenience name for target.
@@ -497,22 +500,48 @@ einit/CMakeFiles/EinitQemu.dir/clean:
 .PHONY : einit/CMakeFiles/EinitQemu.dir/clean
 
 #=============================================================================
+# Target rules for target einit/CMakeFiles/EinitQemu-kss-entities-built.dir
+
+# All Build rule for target.
+einit/CMakeFiles/EinitQemu-kss-entities-built.dir/all: client/CMakeFiles/ClientExec.dir/all
+einit/CMakeFiles/EinitQemu-kss-entities-built.dir/all: server/CMakeFiles/ServerExec.dir/all
+einit/CMakeFiles/EinitQemu-kss-entities-built.dir/all: einit/CMakeFiles/EinitQemu.dir/all
+	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu-kss-entities-built.dir/build.make einit/CMakeFiles/EinitQemu-kss-entities-built.dir/depend
+	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu-kss-entities-built.dir/build.make einit/CMakeFiles/EinitQemu-kss-entities-built.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num= "Built target EinitQemu-kss-entities-built"
+.PHONY : einit/CMakeFiles/EinitQemu-kss-entities-built.dir/all
+
+# Build rule for subdir invocation for target.
+einit/CMakeFiles/EinitQemu-kss-entities-built.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 20
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitQemu-kss-entities-built.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
+.PHONY : einit/CMakeFiles/EinitQemu-kss-entities-built.dir/rule
+
+# Convenience name for target.
+EinitQemu-kss-entities-built: einit/CMakeFiles/EinitQemu-kss-entities-built.dir/rule
+.PHONY : EinitQemu-kss-entities-built
+
+# clean rule for target.
+einit/CMakeFiles/EinitQemu-kss-entities-built.dir/clean:
+	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu-kss-entities-built.dir/build.make einit/CMakeFiles/EinitQemu-kss-entities-built.dir/clean
+.PHONY : einit/CMakeFiles/EinitQemu-kss-entities-built.dir/clean
+
+#=============================================================================
 # Target rules for target einit/CMakeFiles/EinitQemu-kss-makekss-output.dir
 
 # All Build rule for target.
-einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/all: client/CMakeFiles/Client.dir/all
-einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/all: server/CMakeFiles/Server.dir/all
-einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/all: einit/CMakeFiles/EinitQemu.dir/all
+einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/all: einit/CMakeFiles/EinitQemu-kss-entities-built.dir/all
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/build.make einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/depend
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/build.make einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=12 "Built target EinitQemu-kss-makekss-output"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=12 "Built target EinitQemu-kss-makekss-output"
 .PHONY : einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/all
 
 # Build rule for subdir invocation for target.
 einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 21
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
 .PHONY : einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/rule
 
 # Convenience name for target.
@@ -528,20 +557,21 @@ einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/clean:
 # Target rules for target einit/CMakeFiles/kos-qemu-image.dir
 
 # All Build rule for target.
-einit/CMakeFiles/kos-qemu-image.dir/all: client/CMakeFiles/Client.dir/all
-einit/CMakeFiles/kos-qemu-image.dir/all: server/CMakeFiles/Server.dir/all
+einit/CMakeFiles/kos-qemu-image.dir/all: client/CMakeFiles/ClientExec.dir/all
+einit/CMakeFiles/kos-qemu-image.dir/all: server/CMakeFiles/ServerExec.dir/all
 einit/CMakeFiles/kos-qemu-image.dir/all: einit/CMakeFiles/EinitQemu.dir/all
+einit/CMakeFiles/kos-qemu-image.dir/all: einit/CMakeFiles/EinitQemu-kss-entities-built.dir/all
 einit/CMakeFiles/kos-qemu-image.dir/all: einit/CMakeFiles/EinitQemu-kss-makekss-output.dir/all
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/kos-qemu-image.dir/build.make einit/CMakeFiles/kos-qemu-image.dir/depend
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/kos-qemu-image.dir/build.make einit/CMakeFiles/kos-qemu-image.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=30,31 "Built target kos-qemu-image"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=30,31 "Built target kos-qemu-image"
 .PHONY : einit/CMakeFiles/kos-qemu-image.dir/all
 
 # Build rule for subdir invocation for target.
 einit/CMakeFiles/kos-qemu-image.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/kos-qemu-image.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
 .PHONY : einit/CMakeFiles/kos-qemu-image.dir/rule
 
 # Convenience name for target.
@@ -560,14 +590,14 @@ einit/CMakeFiles/kos-qemu-image.dir/clean:
 einit/CMakeFiles/sim.dir/all: einit/CMakeFiles/kos-qemu-image.dir/all
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/sim.dir/build.make einit/CMakeFiles/sim.dir/depend
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/sim.dir/build.make einit/CMakeFiles/sim.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=32 "Built target sim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=32 "Built target sim"
 .PHONY : einit/CMakeFiles/sim.dir/all
 
 # Build rule for subdir invocation for target.
 einit/CMakeFiles/sim.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/sim.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
 .PHONY : einit/CMakeFiles/sim.dir/rule
 
 # Convenience name for target.
@@ -586,14 +616,14 @@ einit/CMakeFiles/sim.dir/clean:
 einit/CMakeFiles/gdbsim.dir/all: einit/CMakeFiles/kos-qemu-image.dir/all
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/gdbsim.dir/build.make einit/CMakeFiles/gdbsim.dir/depend
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/gdbsim.dir/build.make einit/CMakeFiles/gdbsim.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=27 "Built target gdbsim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=27 "Built target gdbsim"
 .PHONY : einit/CMakeFiles/gdbsim.dir/all
 
 # Build rule for subdir invocation for target.
 einit/CMakeFiles/gdbsim.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/gdbsim.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
 .PHONY : einit/CMakeFiles/gdbsim.dir/rule
 
 # Convenience name for target.
@@ -609,19 +639,19 @@ einit/CMakeFiles/gdbsim.dir/clean:
 # Target rules for target einit/CMakeFiles/ext_debug.dir
 
 # All Build rule for target.
-einit/CMakeFiles/ext_debug.dir/all: client/CMakeFiles/Client.dir/all
-einit/CMakeFiles/ext_debug.dir/all: server/CMakeFiles/Server.dir/all
+einit/CMakeFiles/ext_debug.dir/all: client/CMakeFiles/ClientExec.dir/all
+einit/CMakeFiles/ext_debug.dir/all: server/CMakeFiles/ServerExec.dir/all
 einit/CMakeFiles/ext_debug.dir/all: einit/CMakeFiles/kos-qemu-image.dir/all
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/ext_debug.dir/build.make einit/CMakeFiles/ext_debug.dir/depend
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/ext_debug.dir/build.make einit/CMakeFiles/ext_debug.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo/build/CMakeFiles --progress-num= "Built target ext_debug"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num= "Built target ext_debug"
 .PHONY : einit/CMakeFiles/ext_debug.dir/all
 
 # Build rule for subdir invocation for target.
 einit/CMakeFiles/ext_debug.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/ext_debug.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
 .PHONY : einit/CMakeFiles/ext_debug.dir/rule
 
 # Convenience name for target.
@@ -640,14 +670,14 @@ einit/CMakeFiles/ext_debug.dir/clean:
 einit/CMakeFiles/gdb.dir/all: einit/CMakeFiles/kos-qemu-image.dir/all
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/gdb.dir/build.make einit/CMakeFiles/gdb.dir/depend
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/gdb.dir/build.make einit/CMakeFiles/gdb.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo/build/CMakeFiles --progress-num= "Built target gdb"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num= "Built target gdb"
 .PHONY : einit/CMakeFiles/gdb.dir/all
 
 # Build rule for subdir invocation for target.
 einit/CMakeFiles/gdb.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/gdb.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
 .PHONY : einit/CMakeFiles/gdb.dir/rule
 
 # Convenience name for target.
@@ -658,6 +688,32 @@ gdb: einit/CMakeFiles/gdb.dir/rule
 einit/CMakeFiles/gdb.dir/clean:
 	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/gdb.dir/build.make einit/CMakeFiles/gdb.dir/clean
 .PHONY : einit/CMakeFiles/gdb.dir/clean
+
+#=============================================================================
+# Target rules for target einit/CMakeFiles/cgdb.dir
+
+# All Build rule for target.
+einit/CMakeFiles/cgdb.dir/all: einit/CMakeFiles/kos-qemu-image.dir/all
+	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/cgdb.dir/build.make einit/CMakeFiles/cgdb.dir/depend
+	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/cgdb.dir/build.make einit/CMakeFiles/cgdb.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num= "Built target cgdb"
+.PHONY : einit/CMakeFiles/cgdb.dir/all
+
+# Build rule for subdir invocation for target.
+einit/CMakeFiles/cgdb.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 23
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 einit/CMakeFiles/cgdb.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
+.PHONY : einit/CMakeFiles/cgdb.dir/rule
+
+# Convenience name for target.
+cgdb: einit/CMakeFiles/cgdb.dir/rule
+.PHONY : cgdb
+
+# clean rule for target.
+einit/CMakeFiles/cgdb.dir/clean:
+	$(MAKE) $(MAKESILENT) -f einit/CMakeFiles/cgdb.dir/build.make einit/CMakeFiles/cgdb.dir/clean
+.PHONY : einit/CMakeFiles/cgdb.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake
+CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake
 
 # The command to remove a file.
-RM = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -E rm -f
+RM = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/echo
+CMAKE_SOURCE_DIR = /home/user/echo_mod
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/echo/build
+CMAKE_BINARY_DIR = /home/user/echo_mod/build
 
 # Utility rule file for gdb.
 
@@ -68,7 +68,7 @@ include einit/CMakeFiles/gdb.dir/progress.make
 
 einit/CMakeFiles/gdb: einit/.gdbinit.ide
 einit/CMakeFiles/gdb: einit/.gdbinit
-	cd /home/user/echo/build/einit && /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/aarch64-kos-gdb $(GDBOPTIONS)
+	cd /home/user/echo_mod/build/einit && /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/aarch64-kos-gdb $(GDBOPTIONS)
 
 gdb: einit/CMakeFiles/gdb
 gdb: einit/CMakeFiles/gdb.dir/build.make
@@ -79,10 +79,10 @@ einit/CMakeFiles/gdb.dir/build: gdb
 .PHONY : einit/CMakeFiles/gdb.dir/build
 
 einit/CMakeFiles/gdb.dir/clean:
-	cd /home/user/echo/build/einit && $(CMAKE_COMMAND) -P CMakeFiles/gdb.dir/cmake_clean.cmake
+	cd /home/user/echo_mod/build/einit && $(CMAKE_COMMAND) -P CMakeFiles/gdb.dir/cmake_clean.cmake
 .PHONY : einit/CMakeFiles/gdb.dir/clean
 
 einit/CMakeFiles/gdb.dir/depend:
-	cd /home/user/echo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/echo /home/user/echo/einit /home/user/echo/build /home/user/echo/build/einit /home/user/echo/build/einit/CMakeFiles/gdb.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/echo_mod/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/echo_mod /home/user/echo_mod/einit /home/user/echo_mod/build /home/user/echo_mod/build/einit /home/user/echo_mod/build/einit/CMakeFiles/gdb.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : einit/CMakeFiles/gdb.dir/depend
 

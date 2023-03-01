@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake
+CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake
 
 # The command to remove a file.
-RM = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -E rm -f
+RM = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/echo
+CMAKE_SOURCE_DIR = /home/user/echo_mod
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/echo/build
+CMAKE_BINARY_DIR = /home/user/echo_mod/build
 
 # Include any dependencies generated for this target.
 include einit/CMakeFiles/EinitHw.dir/depend.make
@@ -70,24 +70,24 @@ include einit/CMakeFiles/EinitHw.dir/progress.make
 include einit/CMakeFiles/EinitHw.dir/flags.make
 
 einit/EinitHw-kss/EinitHw.c: einit/EinitHw-kss/init.yaml
-einit/EinitHw-kss/EinitHw.c: client/Client
-einit/EinitHw-kss/EinitHw.c: server/Server
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EinitHw-kss/EinitHw.c"
-	cd /home/user/echo/build/einit && /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/einit -I /home/user/echo/build/_headers_ -I /home/user/echo/build/_headers_/echo/.. -I /home/user/echo/build/../install/include -I /opt/KasperskyOS-Community-Edition-1.1.0.204/sysroot-aarch64-kos/include -I /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/aarch64-kos/include -I /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/include -o /home/user/echo/build/einit/EinitHw-kss/EinitHw.c /home/user/echo/build/einit/EinitHw-kss/init.yaml
+einit/EinitHw-kss/EinitHw.c: client/ClientExec
+einit/EinitHw-kss/EinitHw.c: server/ServerExec
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EinitHw-kss/EinitHw.c"
+	cd /home/user/echo_mod/build/einit && /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/einit -I /home/user/echo_mod/build/_headers_ -I /home/user/echo_mod/build/_headers_/echo/.. -I /home/user/echo_mod/build/../install/include -I /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include -I /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/aarch64-kos/include -I /sysroot-aarch64-kos/include -I /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/include -o /home/user/echo_mod/build/einit/EinitHw-kss/EinitHw.c /home/user/echo_mod/build/einit/EinitHw-kss/init.yaml
 
 einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.o: einit/CMakeFiles/EinitHw.dir/flags.make
 einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.o: einit/EinitHw-kss/EinitHw.c
 einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.o: einit/CMakeFiles/EinitHw.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.o"
-	cd /home/user/echo/build/einit && /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/aarch64-kos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.o -MF CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.o.d -o CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.o -c /home/user/echo/build/einit/EinitHw-kss/EinitHw.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.o"
+	cd /home/user/echo_mod/build/einit && /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/aarch64-kos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.o -MF CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.o.d -o CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.o -c /home/user/echo_mod/build/einit/EinitHw-kss/EinitHw.c
 
 einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.i"
-	cd /home/user/echo/build/einit && /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/aarch64-kos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/user/echo/build/einit/EinitHw-kss/EinitHw.c > CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.i
+	cd /home/user/echo_mod/build/einit && /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/aarch64-kos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/user/echo_mod/build/einit/EinitHw-kss/EinitHw.c > CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.i
 
 einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.s"
-	cd /home/user/echo/build/einit && /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/aarch64-kos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/user/echo/build/einit/EinitHw-kss/EinitHw.c -o CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.s
+	cd /home/user/echo_mod/build/einit && /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/aarch64-kos-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/user/echo_mod/build/einit/EinitHw-kss/EinitHw.c -o CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.s
 
 # Object files for target EinitHw
 EinitHw_OBJECTS = \
@@ -99,18 +99,18 @@ EinitHw_EXTERNAL_OBJECTS =
 einit/EinitHw: einit/CMakeFiles/EinitHw.dir/EinitHw-kss/EinitHw.c.o
 einit/EinitHw: einit/CMakeFiles/EinitHw.dir/build.make
 einit/EinitHw: einit/CMakeFiles/EinitHw.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable EinitHw"
-	cd /home/user/echo/build/einit && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/EinitHw.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable EinitHw"
+	cd /home/user/echo_mod/build/einit && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/EinitHw.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 einit/CMakeFiles/EinitHw.dir/build: einit/EinitHw
 .PHONY : einit/CMakeFiles/EinitHw.dir/build
 
 einit/CMakeFiles/EinitHw.dir/clean:
-	cd /home/user/echo/build/einit && $(CMAKE_COMMAND) -P CMakeFiles/EinitHw.dir/cmake_clean.cmake
+	cd /home/user/echo_mod/build/einit && $(CMAKE_COMMAND) -P CMakeFiles/EinitHw.dir/cmake_clean.cmake
 .PHONY : einit/CMakeFiles/EinitHw.dir/clean
 
 einit/CMakeFiles/EinitHw.dir/depend: einit/EinitHw-kss/EinitHw.c
-	cd /home/user/echo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/echo /home/user/echo/einit /home/user/echo/build /home/user/echo/build/einit /home/user/echo/build/einit/CMakeFiles/EinitHw.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/echo_mod/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/echo_mod /home/user/echo_mod/einit /home/user/echo_mod/build /home/user/echo_mod/build/einit /home/user/echo_mod/build/einit/CMakeFiles/EinitHw.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : einit/CMakeFiles/EinitHw.dir/depend
 

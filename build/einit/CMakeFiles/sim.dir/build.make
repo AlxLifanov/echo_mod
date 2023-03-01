@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake
+CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake
 
 # The command to remove a file.
-RM = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -E rm -f
+RM = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/echo
+CMAKE_SOURCE_DIR = /home/user/echo_mod
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/echo/build
+CMAKE_BINARY_DIR = /home/user/echo_mod/build
 
 # Utility rule file for sim.
 
@@ -67,8 +67,8 @@ include einit/CMakeFiles/sim.dir/compiler_depend.make
 include einit/CMakeFiles/sim.dir/progress.make
 
 einit/CMakeFiles/sim:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running QEMU with KasperskyOS image..."
-	cd /home/user/echo/build/einit && /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/qemu-system-aarch64 -m 2048 -machine vexpress-a15,secure=on -cpu cortex-a72 -nographic -monitor none -nic user -serial stdio -kernel /home/user/echo/build/einit/kos-qemu-image
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running QEMU with KasperskyOS image..."
+	cd /home/user/echo_mod/build/einit && /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/qemu-system-aarch64 -m 2048 -machine vexpress-a15,secure=on -cpu cortex-a72 -nographic -monitor none -smp 4 -nic user -serial stdio -kernel /home/user/echo_mod/build/einit/kos-qemu-image
 
 sim: einit/CMakeFiles/sim
 sim: einit/CMakeFiles/sim.dir/build.make
@@ -79,10 +79,10 @@ einit/CMakeFiles/sim.dir/build: sim
 .PHONY : einit/CMakeFiles/sim.dir/build
 
 einit/CMakeFiles/sim.dir/clean:
-	cd /home/user/echo/build/einit && $(CMAKE_COMMAND) -P CMakeFiles/sim.dir/cmake_clean.cmake
+	cd /home/user/echo_mod/build/einit && $(CMAKE_COMMAND) -P CMakeFiles/sim.dir/cmake_clean.cmake
 .PHONY : einit/CMakeFiles/sim.dir/clean
 
 einit/CMakeFiles/sim.dir/depend:
-	cd /home/user/echo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/echo /home/user/echo/einit /home/user/echo/build /home/user/echo/build/einit /home/user/echo/build/einit/CMakeFiles/sim.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/echo_mod/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/echo_mod /home/user/echo_mod/einit /home/user/echo_mod/build /home/user/echo_mod/build/einit /home/user/echo_mod/build/einit/CMakeFiles/sim.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : einit/CMakeFiles/sim.dir/depend
 

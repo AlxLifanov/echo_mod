@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/aarch64-kos-gcc")
+set(CMAKE_C_COMPILER "/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/aarch64-kos-gcc")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "9.2.1")
@@ -21,11 +21,11 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/aarch64-kos-ar")
-set(CMAKE_C_COMPILER_AR "/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/aarch64-kos-gcc-ar")
-set(CMAKE_RANLIB "/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/aarch64-kos-ranlib")
-set(CMAKE_C_COMPILER_RANLIB "/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/aarch64-kos-gcc-ranlib")
-set(CMAKE_LINKER "/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/aarch64-kos-ld")
+set(CMAKE_AR "/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/aarch64-kos-ar")
+set(CMAKE_C_COMPILER_AR "/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/aarch64-kos-gcc-ar")
+set(CMAKE_RANLIB "/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/aarch64-kos-ranlib")
+set(CMAKE_C_COMPILER_RANLIB "/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/aarch64-kos-gcc-ranlib")
+set(CMAKE_LINKER "/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/aarch64-kos-ld")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCC 1)
 set(CMAKE_C_COMPILER_LOADED 1)
@@ -66,7 +66,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/lib/gcc/aarch64-kos/9.2.1/include;/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/lib/gcc/aarch64-kos/9.2.1/include-fixed;/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/aarch64-kos/include;/opt/KasperskyOS-Community-Edition-1.1.0.204/sysroot-aarch64-kos/include")
-set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "/opt/KasperskyOS-Community-Edition-1.1.0.204/sysroot-aarch64-kos/lib/crt0.a;gcc;c;vfs;env;signald;kos;rtlcom;c;gcc;c")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/lib/gcc/aarch64-kos/9.2.1;/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/aarch64-kos/lib;/opt/KasperskyOS-Community-Edition-1.1.0.204/sysroot-aarch64-kos/lib")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/lib/gcc/aarch64-kos/9.2.1/include;/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/lib/gcc/aarch64-kos/9.2.1/include-fixed;/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/aarch64-kos/include;/opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include")
+set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "/opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/lib/crt0.a;gcc;c;vfs;env;signald;kos;rtlcom;c;gcc;c")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/lib/gcc/aarch64-kos/9.2.1;/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/aarch64-kos/lib;/opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

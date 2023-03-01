@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/user/echo/server/src/server.c" "server/CMakeFiles/Server.dir/src/server.c.o" "gcc" "server/CMakeFiles/Server.dir/src/server.c.o.d"
+  "/home/user/echo_mod/server/src/server.c" "server/CMakeFiles/Server.dir/src/server.c.o" "gcc" "server/CMakeFiles/Server.dir/src/server.c.o.d"
   )
 
 # Targets to which this target links.

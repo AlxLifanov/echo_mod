@@ -143,8 +143,8 @@ enum {
 #endif /* NK_USE_UNQUALIFIED_NAMES */
 #endif /* __echo__Ping__COMPONENT_ENDPOINTS__ */
 
-#ifndef __echo__Server__ENTITY_ENDPOINTS__
-#define __echo__Server__ENTITY_ENDPOINTS__
+#ifndef __echo__Server__TASK_ENDPOINTS__
+#define __echo__Server__TASK_ENDPOINTS__
 enum {
     echo_Server_entity_req_arena_size =
     echo_Server_component_req_arena_size,
@@ -167,7 +167,7 @@ enum {
 #define Server_entity_res_handles echo_Server_entity_res_handles
 #define Server_entity_err_handles echo_Server_entity_err_handles
 #endif /* NK_USE_UNQUALIFIED_NAMES */
-#endif /* __echo__Server__ENTITY_ENDPOINTS__ */
+#endif /* __echo__Server__TASK_ENDPOINTS__ */
 
 #ifndef __echo__Ping__VTABLE__
 #define __echo__Ping__VTABLE__

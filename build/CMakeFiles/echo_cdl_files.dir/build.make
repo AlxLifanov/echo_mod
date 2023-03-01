@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake
+CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake
 
 # The command to remove a file.
-RM = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -E rm -f
+RM = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/echo
+CMAKE_SOURCE_DIR = /home/user/echo_mod
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/echo/build
+CMAKE_BINARY_DIR = /home/user/echo_mod/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/echo_cdl_files.dir/depend.make
@@ -70,16 +70,16 @@ include CMakeFiles/echo_cdl_files.dir/progress.make
 include CMakeFiles/echo_cdl_files.dir/flags.make
 
 _headers_/echo/Ping.cdl.h: Ping.cdl.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating _headers_/echo/Ping.cdl.h"
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -E copy /home/user/echo/build/Ping.cdl.h /home/user/echo/build/_headers_/echo/../echo/Ping.cdl.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating _headers_/echo/Ping.cdl.h"
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -E copy /home/user/echo_mod/build/Ping.cdl.h /home/user/echo_mod/build/_headers_/echo/../echo/Ping.cdl.h
 
 Ping.cdl.h: _headers_/echo/Ping.cdl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Ping.cdl.h"
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/nk-gen-c -I /home/user/echo/build/_headers_ -I /home/user/echo/build/_headers_/echo/.. -I /home/user/echo/build/../install/include -I /opt/KasperskyOS-Community-Edition-1.1.0.204/sysroot-aarch64-kos/include -I /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/aarch64-kos/include -I /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/include -P /opt/KasperskyOS-Community-Edition-1.1.0.204/sysroot-aarch64-kos/include/system.platform -I /home/user/echo/build/_headers_/echo/../echo /home/user/echo/build/_headers_/echo/../echo/Ping.cdl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Ping.cdl.h"
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/nk-gen-c -I /home/user/echo_mod/build/_headers_ -I /home/user/echo_mod/build/_headers_/echo/.. -I /home/user/echo_mod/build/../install/include -I /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include -I /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/aarch64-kos/include -I /sysroot-aarch64-kos/include -I /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/include -P /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/system.platform -I /home/user/echo_mod/build/_headers_/echo/../echo /home/user/echo_mod/build/_headers_/echo/../echo/Ping.cdl
 
 _headers_/echo/Ping.cdl: ../resources/Ping.cdl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/echo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating _headers_/echo/Ping.cdl"
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -E copy /home/user/echo/resources/Ping.cdl /home/user/echo/build/_headers_/echo/../echo/Ping.cdl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating _headers_/echo/Ping.cdl"
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -E copy /home/user/echo_mod/resources/Ping.cdl /home/user/echo_mod/build/_headers_/echo/../echo/Ping.cdl
 
 echo_cdl_files: CMakeFiles/echo_cdl_files.dir/build.make
 .PHONY : echo_cdl_files
@@ -95,6 +95,6 @@ CMakeFiles/echo_cdl_files.dir/clean:
 CMakeFiles/echo_cdl_files.dir/depend: Ping.cdl.h
 CMakeFiles/echo_cdl_files.dir/depend: _headers_/echo/Ping.cdl
 CMakeFiles/echo_cdl_files.dir/depend: _headers_/echo/Ping.cdl.h
-	cd /home/user/echo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/echo /home/user/echo /home/user/echo/build /home/user/echo/build /home/user/echo/build/CMakeFiles/echo_cdl_files.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/echo_mod/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/echo_mod /home/user/echo_mod /home/user/echo_mod/build /home/user/echo_mod/build /home/user/echo_mod/build/CMakeFiles/echo_cdl_files.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/echo_cdl_files.dir/depend
 

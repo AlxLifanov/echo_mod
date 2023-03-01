@@ -6,10 +6,6 @@ project (echo)
 include (platform)
 initialize_platform (FORCE_STATIC)
 
-# Add Doxygen documentation
-include (platform/doxygen)
-add_project_documentation_main_target ()
-
 # Tools for using NK parser.
 include (platform/nk)
 

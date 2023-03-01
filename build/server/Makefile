@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake
+CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake
 
 # The command to remove a file.
-RM = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -E rm -f
+RM = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/echo
+CMAKE_SOURCE_DIR = /home/user/echo_mod
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/echo/build
+CMAKE_BINARY_DIR = /home/user/echo_mod/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/user/echo/build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -97,49 +97,49 @@ list_install_components/fast: list_install_components
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -P cmake_install.cmake
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -P cmake_install.cmake
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/user/echo/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles /home/user/echo/build/server//CMakeFiles/progress.marks
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo/build/CMakeFiles 0
+	cd /home/user/echo_mod/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles /home/user/echo_mod/build/server//CMakeFiles/progress.marks
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/echo_mod/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/clean
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,39 +148,39 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/preinstall
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/preinstall
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/user/echo/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/user/echo_mod/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-server/CMakeFiles/Server.dir/rule:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/CMakeFiles/Server.dir/rule
-.PHONY : server/CMakeFiles/Server.dir/rule
+server/CMakeFiles/ServerExec.dir/rule:
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/CMakeFiles/ServerExec.dir/rule
+.PHONY : server/CMakeFiles/ServerExec.dir/rule
 
 # Convenience name for target.
-Server: server/CMakeFiles/Server.dir/rule
-.PHONY : Server
+ServerExec: server/CMakeFiles/ServerExec.dir/rule
+.PHONY : ServerExec
 
 # fast build rule for target.
-Server/fast:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/Server.dir/build.make server/CMakeFiles/Server.dir/build
-.PHONY : Server/fast
+ServerExec/fast:
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/ServerExec.dir/build.make server/CMakeFiles/ServerExec.dir/build
+.PHONY : ServerExec/fast
 
 src/server.o: src/server.c.o
 .PHONY : src/server.o
 
 # target to build an object file
 src/server.c.o:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/Server.dir/build.make server/CMakeFiles/Server.dir/src/server.c.o
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/ServerExec.dir/build.make server/CMakeFiles/ServerExec.dir/src/server.c.o
 .PHONY : src/server.c.o
 
 src/server.i: src/server.c.i
@@ -188,7 +188,7 @@ src/server.i: src/server.c.i
 
 # target to preprocess a source file
 src/server.c.i:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/Server.dir/build.make server/CMakeFiles/Server.dir/src/server.c.i
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/ServerExec.dir/build.make server/CMakeFiles/ServerExec.dir/src/server.c.i
 .PHONY : src/server.c.i
 
 src/server.s: src/server.c.s
@@ -196,7 +196,7 @@ src/server.s: src/server.c.s
 
 # target to generate assembly for a file
 src/server.c.s:
-	cd /home/user/echo/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/Server.dir/build.make server/CMakeFiles/Server.dir/src/server.c.s
+	cd /home/user/echo_mod/build && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/ServerExec.dir/build.make server/CMakeFiles/ServerExec.dir/src/server.c.s
 .PHONY : src/server.c.s
 
 # Help Target
@@ -211,7 +211,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... Server"
+	@echo "... ServerExec"
 	@echo "... src/server.o"
 	@echo "... src/server.i"
 	@echo "... src/server.s"
@@ -226,6 +226,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/user/echo/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/user/echo_mod/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/user/echo
+# Install script for directory: /home/user/echo_mod
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/user/echo/build/../install")
+  set(CMAKE_INSTALL_PREFIX "/home/user/echo_mod/build/../install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,42 +34,42 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/aarch64-kos-objdump")
+  set(CMAKE_OBJDUMP "/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/aarch64-kos-objdump")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xnk_headersx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/echo" TYPE FILE FILES
-    "/home/user/echo/build/_headers_/echo/../echo/Ping.idl"
-    "/home/user/echo/build/_headers_/echo/../echo/Ping.idl.h"
+    "/home/user/echo_mod/build/_headers_/echo/../echo/Ping.idl"
+    "/home/user/echo_mod/build/_headers_/echo/../echo/Ping.idl.h"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xnk_headersx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/echo" TYPE FILE FILES
-    "/home/user/echo/build/_headers_/echo/../echo/Ping.cdl"
-    "/home/user/echo/build/_headers_/echo/../echo/Ping.cdl.h"
+    "/home/user/echo_mod/build/_headers_/echo/../echo/Ping.cdl"
+    "/home/user/echo_mod/build/_headers_/echo/../echo/Ping.cdl.h"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xnk_headersx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/echo" TYPE FILE FILES
-    "/home/user/echo/build/_headers_/echo/../echo/Server.edl"
-    "/home/user/echo/build/_headers_/echo/../echo/Server.edl.h"
+    "/home/user/echo_mod/build/_headers_/echo/../echo/Server.edl"
+    "/home/user/echo_mod/build/_headers_/echo/../echo/Server.edl.h"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xnk_headersx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/echo" TYPE FILE FILES
-    "/home/user/echo/build/_headers_/echo/../echo/Client.edl"
-    "/home/user/echo/build/_headers_/echo/../echo/Client.edl.h"
+    "/home/user/echo_mod/build/_headers_/echo/../echo/Client.edl"
+    "/home/user/echo_mod/build/_headers_/echo/../echo/Client.edl.h"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/user/echo/build/client/cmake_install.cmake")
-  include("/home/user/echo/build/server/cmake_install.cmake")
-  include("/home/user/echo/build/einit/cmake_install.cmake")
+  include("/home/user/echo_mod/build/client/cmake_install.cmake")
+  include("/home/user/echo_mod/build/server/cmake_install.cmake")
+  include("/home/user/echo_mod/build/einit/cmake_install.cmake")
 
 endif()
 
@@ -81,5 +81,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/user/echo/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/user/echo_mod/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

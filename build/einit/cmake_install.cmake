@@ -1,8 +1,8 @@
-# Install script for directory: /home/user/echo/einit
+# Install script for directory: /home/user/echo_mod/einit
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/user/echo/build/../install")
+  set(CMAKE_INSTALL_PREFIX "/home/user/echo_mod/build/../install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,6 +34,6 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/aarch64-kos-objdump")
+  set(CMAKE_OBJDUMP "/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/aarch64-kos-objdump")
 endif()
 

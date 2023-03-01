@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake
+CMAKE_COMMAND = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake
 
 # The command to remove a file.
-RM = /opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/cmake -E rm -f
+RM = /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/echo
+CMAKE_SOURCE_DIR = /home/user/echo_mod
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/echo/build
+CMAKE_BINARY_DIR = /home/user/echo_mod/build
 
 # Utility rule file for ext_debug.
 
@@ -68,7 +68,7 @@ include einit/CMakeFiles/ext_debug.dir/progress.make
 
 einit/CMakeFiles/ext_debug: einit/.gdbinit.ide
 einit/CMakeFiles/ext_debug: einit/.gdbinit
-	cd /home/user/echo/build/einit && echo "DEBUG_SETTINGS_JSON={  \"entities\" : [ \"/home/user/echo/build/client/Client\", \"/home/user/echo/build/server/Server\" ],  \"qemu\" :   {    \"bin\" : \"/opt/KasperskyOS-Community-Edition-1.1.0.204/toolchain/bin/qemu-system-aarch64\",    \"env\" : \"\",    \"flags\" : \"-m 2048 -machine vexpress-a15,secure=on -cpu cortex-a72 -nographic -monitor none -nic user -serial stdio\",    \"kernel\" : \"/home/user/echo/build/einit/kos-qemu-image\"  }}"
+	cd /home/user/echo_mod/build/einit && echo "DEBUG_SETTINGS_JSON={  \"entities\" : [ \"/home/user/echo_mod/build/client/ClientExec\", \"/home/user/echo_mod/build/server/ServerExec\" ],  \"qemu\" :   {    \"bin\" : \"/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/qemu-system-aarch64\",    \"env\" : \"\",    \"flags\" : \"-m 2048 -machine vexpress-a15,secure=on -cpu cortex-a72 -nographic -monitor none -smp 4 -nic user -serial stdio\",    \"kernel\" : \"/home/user/echo_mod/build/einit/kos-qemu-image\"  }}"
 
 ext_debug: einit/CMakeFiles/ext_debug
 ext_debug: einit/CMakeFiles/ext_debug.dir/build.make
@@ -79,10 +79,10 @@ einit/CMakeFiles/ext_debug.dir/build: ext_debug
 .PHONY : einit/CMakeFiles/ext_debug.dir/build
 
 einit/CMakeFiles/ext_debug.dir/clean:
-	cd /home/user/echo/build/einit && $(CMAKE_COMMAND) -P CMakeFiles/ext_debug.dir/cmake_clean.cmake
+	cd /home/user/echo_mod/build/einit && $(CMAKE_COMMAND) -P CMakeFiles/ext_debug.dir/cmake_clean.cmake
 .PHONY : einit/CMakeFiles/ext_debug.dir/clean
 
 einit/CMakeFiles/ext_debug.dir/depend:
-	cd /home/user/echo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/echo /home/user/echo/einit /home/user/echo/build /home/user/echo/build/einit /home/user/echo/build/einit/CMakeFiles/ext_debug.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/echo_mod/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/echo_mod /home/user/echo_mod/einit /home/user/echo_mod/build /home/user/echo_mod/build/einit /home/user/echo_mod/build/einit/CMakeFiles/ext_debug.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : einit/CMakeFiles/ext_debug.dir/depend
 
