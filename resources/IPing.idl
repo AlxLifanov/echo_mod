@@ -1,0 +1,8 @@
+package echo.IPing
+
+interface {
+    FPing(in UInt32 value, out UInt32 result);  //  function of IPing interface
+}
+
+// This example uses simple argument types. It is also possible to define structs
+// for in-value and out-value for functions. Check secure_logger example for reference.

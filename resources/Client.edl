@@ -1,2 +1,3 @@
 // "echo.Client" is a full class name
 entity echo.Client
+// Client has no endpoints, so has no components {...}

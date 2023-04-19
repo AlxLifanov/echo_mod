@@ -1,0 +1,7 @@
+/* Definition of the `ping` component. */
+
+component echo.CPing
+
+endpoints {
+    ping : echo.IPing  // because it's interface name
+}

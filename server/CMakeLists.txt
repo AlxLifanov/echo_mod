@@ -6,7 +6,6 @@ include (platform/nk)
 # Set compile flags.
 project_header_default ("STANDARD_GNU_11:YES" "STRICT_WARNINGS:NO")
 
-# Here we define executable file name and link it to source and libs
 add_executable (ServerExec "src/server.c")
 add_dependencies (ServerExec echo_server_edl_files)
 

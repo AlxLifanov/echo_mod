@@ -8,7 +8,7 @@
 #include <coresrv/sl/sl_api.h>
 
 /* Description of the server interface used by the `client` entity. */
-#include <echo/Ping.idl.h>
+#include <echo/IPing.idl.h>
 
 #include <assert.h>
 
@@ -18,48 +18,49 @@
 int main(int argc, const char *argv[])
 {
     NkKosTransport transport;
-    struct echo_Ping_proxy proxy;
+    struct echo_IPing_proxy proxy;
     int i;
 
     fprintf(stderr, "Hello I'm client\n");
 
     /* Get the client IPC handle of the connection named
-     * "server_connection". */
+     * "server_connection" - connection name is set at init.yaml. */
     Handle handle = ServiceLocatorConnect("server_connection");
     assert(handle != INVALID_HANDLE);
 
     /* Initialize IPC transport for interaction with the server entity. */
     NkKosTransport_Init(&transport, handle, NK_NULL, 0);
 
-    /* Get Runtime Interface ID (RIID) for interface echo.Ping.ping.
-     * Here ping is the name of the echo.Ping component instance,
-     * echo.Ping.ping is the name of the Ping interface implementation. */
-    nk_iid_t riid = ServiceLocatorGetRiid(handle, "echo.Ping.ping");
+    /* Get Runtime Interface ID (RIID) for exact component endpoint - check CPing.cdl
+     * echo.CPing is an interface _class_, referenced in Server.edl
+     * ping is the endpoint _instance_ name, referenced in CPing.cdl, left side. */
+    nk_iid_t riid = ServiceLocatorGetRiid(handle, "echo.CPing.ping"); 
     assert(riid != INVALID_RIID);
 
     /* Initialize proxy object by specifying transport (&transport)
      * and server interface identifier (riid). Each method of the
      * proxy object will be implemented by sending a request to the server. */
-    echo_Ping_proxy_init(&proxy, &transport.base, riid);
+    echo_IPing_proxy_init(&proxy, &transport.base, riid);
 
     /* Request and response structures */
-    echo_Ping_Ping_req req;
-    echo_Ping_Ping_res res;
-
-    /* Test loop. */
+    echo_IPing_FPing_req req;
+    echo_IPing_FPing_res res;
+    
+    /* Work loop. */
     req.value = EXAMPLE_VALUE_TO_SEND;
     for (i = 0; i < 10; ++i)
     {
-        /* Call Ping interface method.
-         * Server will be sent a request for calling Ping interface method
-         * ping_comp.ping_impl with the value argument. Calling thread is locked
+        /* Call interface method, referenced in IPing.idl.
+         * Server will be sent a request for calling FPing interface method,
+         * supplied with pointers to both request and response arguments; arena
+         * is not used. Calling thread is locked
          * until a response is received from the server. */
         fprintf(stderr, "[Client] sending value = %d\n", (int) req.value);        
-        if (echo_Ping_Ping(&proxy.base, &req, NULL, &res, NULL) == rcOk)
+        if (echo_IPing_FPing(&proxy.base, &req, NULL, &res, NULL) == rcOk)
 
         {
             /* Print result value from response
-             * (result is the output argument of the Ping method). */
+             * (result is the output argument of the FPing method). */
             fprintf(stderr, "[Client] received result = %d\n", (int) res.result);
             /* Include received result value into value argument
              * to resend to server in next iteration. */
@@ -67,7 +68,7 @@ int main(int argc, const char *argv[])
 
         }
         else
-            fprintf(stderr, "Failed to call echo.Ping.Ping()\n");
+            fprintf(stderr, "Failed to call echo_IPing_FPing()\n");
     }
 
     return EXIT_SUCCESS;

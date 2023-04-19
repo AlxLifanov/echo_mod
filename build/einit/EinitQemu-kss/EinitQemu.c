@@ -16,14 +16,14 @@ static const EntityInfo taskInfo_echo_Client1_0 = {
 };
 static const EndpointInfo endpointsInfo_echo_Server1_1[2] = {
     {
-        .name = "echo.Ping.ping",
+        .name = "echo.CPing.ping",
         .riid = 0,
-        .iface_name = "echo.Ping",
+        .iface_name = "echo.IPing",
     },
     {
-        .name = "Server.ping",
+        .name = "cserver.ping",
         .riid = 0,
-        .iface_name = "echo.Ping",
+        .iface_name = "echo.IPing",
     }
 };
 static const EntityInfo taskInfo_echo_Server1_1 = {

@@ -69,17 +69,17 @@ include CMakeFiles/echo_idl_files.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/echo_idl_files.dir/flags.make
 
-_headers_/echo/Ping.idl.h: Ping.idl.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating _headers_/echo/Ping.idl.h"
-	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -E copy /home/user/echo_mod/build/Ping.idl.h /home/user/echo_mod/build/_headers_/echo/../echo/Ping.idl.h
+_headers_/echo/IPing.idl.h: IPing.idl.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating _headers_/echo/IPing.idl.h"
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -E copy /home/user/echo_mod/build/IPing.idl.h /home/user/echo_mod/build/_headers_/echo/../echo/IPing.idl.h
 
-Ping.idl.h: _headers_/echo/Ping.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Ping.idl.h"
-	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/nk-gen-c -I /home/user/echo_mod/build/_headers_ -I /home/user/echo_mod/build/_headers_/echo/.. -I /home/user/echo_mod/build/../install/include -I /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include -I /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/aarch64-kos/include -I /sysroot-aarch64-kos/include -I /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/include -P /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/system.platform -I /home/user/echo_mod/build/_headers_/echo/../echo /home/user/echo_mod/build/_headers_/echo/../echo/Ping.idl
+IPing.idl.h: _headers_/echo/IPing.idl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating IPing.idl.h"
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/nk-gen-c -I /home/user/echo_mod/build/_headers_ -I /home/user/echo_mod/build/_headers_/echo/.. -I /home/user/echo_mod/build/../install/include -I /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include -I /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/aarch64-kos/include -I /sysroot-aarch64-kos/include -I /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/include -P /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/system.platform -I /home/user/echo_mod/build/_headers_/echo/../echo /home/user/echo_mod/build/_headers_/echo/../echo/IPing.idl
 
-_headers_/echo/Ping.idl: ../resources/Ping.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating _headers_/echo/Ping.idl"
-	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -E copy /home/user/echo_mod/resources/Ping.idl /home/user/echo_mod/build/_headers_/echo/../echo/Ping.idl
+_headers_/echo/IPing.idl: ../resources/IPing.idl
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/echo_mod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating _headers_/echo/IPing.idl"
+	/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/bin/cmake -E copy /home/user/echo_mod/resources/IPing.idl /home/user/echo_mod/build/_headers_/echo/../echo/IPing.idl
 
 echo_idl_files: CMakeFiles/echo_idl_files.dir/build.make
 .PHONY : echo_idl_files
@@ -92,9 +92,9 @@ CMakeFiles/echo_idl_files.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/echo_idl_files.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/echo_idl_files.dir/clean
 
-CMakeFiles/echo_idl_files.dir/depend: Ping.idl.h
-CMakeFiles/echo_idl_files.dir/depend: _headers_/echo/Ping.idl
-CMakeFiles/echo_idl_files.dir/depend: _headers_/echo/Ping.idl.h
+CMakeFiles/echo_idl_files.dir/depend: IPing.idl.h
+CMakeFiles/echo_idl_files.dir/depend: _headers_/echo/IPing.idl
+CMakeFiles/echo_idl_files.dir/depend: _headers_/echo/IPing.idl.h
 	cd /home/user/echo_mod/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/echo_mod /home/user/echo_mod /home/user/echo_mod/build /home/user/echo_mod/build /home/user/echo_mod/build/CMakeFiles/echo_idl_files.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/echo_idl_files.dir/depend
 

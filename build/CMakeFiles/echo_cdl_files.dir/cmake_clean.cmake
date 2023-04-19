@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "Ping.cdl.h"
-  "_headers_/echo/Ping.cdl"
-  "_headers_/echo/Ping.cdl.h"
+  "CPing.cdl.h"
+  "_headers_/echo/CPing.cdl"
+  "_headers_/echo/CPing.cdl.h"
 )
 
 # Per-language clean rules from dependency scanning.

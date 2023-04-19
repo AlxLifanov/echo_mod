@@ -1,5 +1,7 @@
 entity echo.Server
 
 components {
-    Server : echo.Ping
+    cserver : echo.CPing // after dot - must start with capital letter, must match many places
 }
+
+// It is allowed to directly define endpoints{} (check CPing.cdl), if it is not reused and developer is too lazy

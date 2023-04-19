@@ -1,6 +1,6 @@
-set(CMAKE_HOST_SYSTEM "Linux-5.15.0-58-generic")
+set(CMAKE_HOST_SYSTEM "Linux-5.15.0-69-generic")
 set(CMAKE_HOST_SYSTEM_NAME "Linux")
-set(CMAKE_HOST_SYSTEM_VERSION "5.15.0-58-generic")
+set(CMAKE_HOST_SYSTEM_VERSION "5.15.0-69-generic")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
 include("/opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/share/toolchain-aarch64-kos.cmake")

@@ -39,15 +39,15 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xnk_headersx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/echo" TYPE FILE FILES
-    "/home/user/echo_mod/build/_headers_/echo/../echo/Ping.idl"
-    "/home/user/echo_mod/build/_headers_/echo/../echo/Ping.idl.h"
+    "/home/user/echo_mod/build/_headers_/echo/../echo/IPing.idl"
+    "/home/user/echo_mod/build/_headers_/echo/../echo/IPing.idl.h"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xnk_headersx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/echo" TYPE FILE FILES
-    "/home/user/echo_mod/build/_headers_/echo/../echo/Ping.cdl"
-    "/home/user/echo_mod/build/_headers_/echo/../echo/Ping.cdl.h"
+    "/home/user/echo_mod/build/_headers_/echo/../echo/CPing.cdl"
+    "/home/user/echo_mod/build/_headers_/echo/../echo/CPing.cdl.h"
     )
 endif()
 

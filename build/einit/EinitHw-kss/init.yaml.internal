@@ -4,17 +4,17 @@ entities:
 
 # task name path
 - task: echo.Client1                  # process/instance name, but for client's instance name - nodody cares
-  name: echo.Client                   # process class name
-  path: ClientExec                        # executable file name
+  name: echo.Client                   # process class name, referenced in xDLs and security.psl
+  path: ClientExec                    # executable file name, visible during OS load
   connections:
   - target: echo.Server1              # connection should point to exact instance
     id: server_connection
-
+     # preprocessor directive to generate system connections in addition to
+                                      # explicitly described ones. 
 
 
 # The `server` entity can only respond to requests.
-- task: echo.Server1
-  name: echo.Server
-  path: ServerExec
-
+- task: echo.Server1                  # process/instance name, referenced by client connection
+  name: echo.Server                   # process class name, referenced in xDLs and security.psl
+  path: ServerExec                    # executable file name, visible during OS load
 
