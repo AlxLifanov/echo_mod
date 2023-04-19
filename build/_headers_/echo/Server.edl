@@ -1,7 +1,8 @@
 entity echo.Server
 
 components {
-    cserver : echo.CPing // after dot - must start with capital letter, must match many places
+    cserver : echo.CPing // класс компонента определяет вложенные интерфейсы, должен начинаться с большой буквы
 }
 
-// It is allowed to directly define endpoints{} (check CPing.cdl), if it is not reused and developer is too lazy
+// В определении entity не запрещено сразу указать endpoints{} (cv CPing.cdl), если нет переиспользования и разработчик ленив.
+// При этом название автосгенерённых функций будет немного другим, см secure_logger для референса.

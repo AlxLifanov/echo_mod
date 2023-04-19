@@ -1,20 +1,19 @@
 entities:
 
-# The `client` entity can call `server`.
+# Процесс `client` должен вызывать процесс `server`.
 
 # task name path
-- task: echo.Client1                  # process/instance name, but for client's instance name - nodody cares
-  name: echo.Client                   # process class name, referenced in xDLs and security.psl
-  path: ClientExec                    # executable file name, visible during OS load
+- task: echo.Client1                  # имя процесса/экземпляра, но для клиента оно никого не волнует
+  name: echo.Client                   # имя класса процесса, используется в xDL и security.psl
+  path: ClientExec                    # имя исполнимого файла, видно при загрузке ОС
   connections:
-  - target: echo.Server1              # connection should point to exact instance
+  - target: echo.Server1              # соединение должно указывать на конкретный экземпляр сервера
     id: server_connection
-     # preprocessor directive to generate system connections in addition to
-                                      # explicitly described ones. 
+     # директива препроцессора для генерации служебных соединений, в дополнение
+                                      # к явно описанным пользовательским соединениям. Например, к ядру.
 
-
-# The `server` entity can only respond to requests.
-- task: echo.Server1                  # process/instance name, referenced by client connection
-  name: echo.Server                   # process class name, referenced in xDLs and security.psl
-  path: ServerExec                    # executable file name, visible during OS load
-
+# Процесс `server` только отвечает на запросы.
+- task: echo.Server1                  # имя процесса/экземпляра, на него указывает соединение клиента
+  name: echo.Server                   # имя класса процесса, используется в xDL и security.psl
+  path: ServerExec                    # имя исполнимого файла, видно при загрузке ОС
+     # директива препроцессора для генерации служебных соединений

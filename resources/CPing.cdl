@@ -1,7 +1,7 @@
-/* Definition of the `ping` component. */
+/* Определение компонента `ping`. На него ссылается класс echo.Server */
 
 component echo.CPing
 
 endpoints {
-    ping : echo.IPing  // because it's interface name
+    ping : echo.IPing  // Название интерфейса, должно начинаться с большой буквы.
 }

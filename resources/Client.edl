@@ -1,3 +1,4 @@
-// "echo.Client" is a full class name
+// "echo.Client" - это полное имя класса клиента
+
 entity echo.Client
-// Client has no endpoints, so has no components {...}
+// Client не имеет интерфейсов, поэтому нет раздела components {...}
