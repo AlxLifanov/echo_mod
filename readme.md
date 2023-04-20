@@ -1,22 +1,22 @@
-# KasperskyOS simple IPC example (modified)
+# Пример реализации IPC в KasperskyOS (мод стандартного)
 
-## Purpose
+## Назначение
 
-This example is intended for usage with #KasperskyOS PSL educational course - (link TBD).
-It fact it is [a standart SDK example](https://support.kaspersky.ru/help/KCE/1.1/en-US/appendix_echo_example.htm), modified a little bit for readability.
+Пример предназначен для целей обучения разработке в KasperskyOS.
+Это модификация [стандартного примера из SDK](https://support.kaspersky.ru/help/KCE/1.1/en-US/appendix_echo_example.htm), модифицированная для целей обучения.
 
-Example functionality details are in [Wiki](https://github.com/AlxLifanov/echo_mod/wiki).
+Детали реализации дописываю в [Wiki](https://github.com/AlxLifanov/echo_mod/wiki).
 
-This example was tested with KasperskyOS CE SDK v 1.1.0.204.
+Пример тестировался с KasperskyOS CE SDK v 1.1.1.13.
 
-## Installation and usage
-1. Prepare developer's machine [according to the manual](https://support.kaspersky.ru/help/KCE/1.1/en-US/getting_started.htm).
-2. Install [KasperskyOS Community Edition SDK](https://os.kaspersky.ru/development/?form=download).
-3. Copy this example into your home directory, check folder write rights.
-4. Run cross-build.sh.
+## Установка и использование
+1. Подготовьте машину разработки [согласно мануалу](https://support.kaspersky.ru/help/KCE/1.1/en-US/getting_started.htm).
+2. Установите [KasperskyOS Community Edition SDK](https://os.kaspersky.ru/development/?form=download).
+3. Скопируйте этот пример в домашнюю папку пользователя, проверьте права на запись в папку.
+4. Запустите ./cross-build.sh.
 	
-## License
+## Лицензия
 	
-This software is a modified "echo" example from KasperskyOS Community Edition SDK. Distributed "as is" without any liability. All KOS CE SDK original license limitations applied.
+Распространяется "as is" без принятия какой-либо ответственности. Применимы все ограничения оригинальной лицензии KOS CE SDK.
 
-All questions can be routed to https://kas.pr/kosforum .
+Вопросы просьба задавать в форуме: https://kas.pr/kosforum .
