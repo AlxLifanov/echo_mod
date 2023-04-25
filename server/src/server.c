@@ -59,8 +59,8 @@ int main(void)
     NkKosTransport_Init(&transport, handle, NK_NULL, 0);
 
     /* Подготовка структур запроса - частей постоянной длины и переменной (арены).
-     * В этом примере испольуется только часть с постоянной длиной, но для
-     * корректности арену надо тоже инициализировать. */
+     * В этом примере покажу инициализацию арены, хотя если она не используется -
+     * делать это не обязательно (см пример echo_mod_dyn) */
     echo_Server_entity_req req;
     char req_buffer[echo_Server_entity_req_arena_size];
     struct nk_arena req_arena = NK_ARENA_INITIALIZER(req_buffer, req_buffer + sizeof(req_buffer));
