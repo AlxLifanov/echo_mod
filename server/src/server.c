@@ -8,8 +8,6 @@
 #include <coresrv/sl/sl_api.h>
 
 /* Ссылки на заголовки xDL, которые будут сгенерированы автоматически. */
-#include <echo/IPing.idl.h>
-#include <echo/CPing.cdl.h>
 #include <echo/Server.edl.h>
 
 #include <assert.h>

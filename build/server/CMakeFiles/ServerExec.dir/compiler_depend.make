@@ -80,15 +80,11 @@ server/CMakeFiles/ServerExec.dir/src/server.c.o: ../server/src/server.c \
   /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/rtl/assert.h \
   /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/services/task/scp.h \
   /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/rtl/random.h \
-  _headers_/echo/IPing.idl.h \
-  _headers_/echo/CPing.cdl.h \
   _headers_/echo/Server.edl.h \
   /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/assert.h
 
 
 /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/assert.h:
-
-_headers_/echo/IPing.idl.h:
 
 /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/services/task/scp.h:
 
@@ -205,8 +201,6 @@ _headers_/echo/Server.edl.h:
 /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/arm/wchar_limits.h:
 
 /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/lib/gcc/aarch64-kos/9.2.1/include/stddef.h:
-
-_headers_/echo/CPing.cdl.h:
 
 /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/machine/int_mwgwtypes.h:
 

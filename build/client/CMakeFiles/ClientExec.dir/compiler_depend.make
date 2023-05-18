@@ -79,13 +79,11 @@ client/CMakeFiles/ClientExec.dir/src/client.c.o: ../client/src/client.c \
   /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/rtl/assert.h \
   /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/services/task/scp.h \
   /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/rtl/random.h \
-  _headers_/echo/IPing.idl.h \
+  _headers_/echo/Server.edl.h \
   /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/assert.h
 
 
 /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/assert.h:
-
-_headers_/echo/IPing.idl.h:
 
 /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/rtl/random.h:
 
@@ -172,6 +170,8 @@ _headers_/echo/IPing.idl.h:
 /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/arm/int_types.h:
 
 /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/sys/types.h:
+
+_headers_/echo/Server.edl.h:
 
 /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/netbsd-pthread_types.h:
 

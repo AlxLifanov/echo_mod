@@ -36,7 +36,7 @@ int main(int argc, const char *argv[])
      * смотри CPing.cdl
      * echo.CPing - название _класса_ интерфейса, указанное в Server.edl
      * ping  - название _экземпляра_ эндпойнта, указано в CPing.cdl, слева. */
-    nk_iid_t riid = ServiceLocatorGetRiid(handle, "echo.CPing.ping"); 
+    nk_iid_t riid = ServiceLocatorGetRiid(handle, "cserver.ping"); 
     assert(riid != INVALID_RIID);
 
     /* Инициализируем прокси-объект с указанием конкретного канала (&transport)

@@ -78,7 +78,5 @@ server/CMakeFiles/ServerExec.dir/src/server.c.o: \
  /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/rtl/assert.h \
  /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/services/task/scp.h \
  /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/rtl/random.h \
- /home/user/echo_mod/build/_headers_/echo/IPing.idl.h \
- /home/user/echo_mod/build/_headers_/echo/CPing.cdl.h \
  /home/user/echo_mod/build/_headers_/echo/Server.edl.h \
  /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/assert.h

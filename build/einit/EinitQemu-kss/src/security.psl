@@ -32,7 +32,7 @@ response {
  * Он работает с предыдущим правилом через логическое И - т.е. для
  * разрешения все относимые к действию правила должны вернуть grant(true) */
 
-
+/*
 response
     src=echo.Server
     dst=echo.Client
@@ -40,7 +40,7 @@ response
     method=FPing {
         assert (message.result < 800)
 }
-
+*/
 
 /* Разрешены любые ошибки. */
 error {

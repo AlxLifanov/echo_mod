@@ -12,7 +12,7 @@ Name             Origin             Length             Attributes
 Linker script and memory map
 
 LOAD /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/../libexec/aarch64-kos/kos-qemu
-LOAD /tmp/tmp.sIYjKsxkhW
+LOAD /tmp/tmp.kZFylVMBoy
 LOAD /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/lib/gcc/aarch64-kos/9.2.1/libgcc.a
                 0x0000000082000000                . = 0x82000000
                 0x0000000082000000                _begin = .
@@ -190,7 +190,7 @@ LOAD /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/lib/gcc/aarch64-kos/9
                 0x00000000820083e0                memset
                 0x00000000820083f0                memcmp
                 0x0000000082008400                strcmp
- .text          0x0000000082008404        0x0 /tmp/tmp.sIYjKsxkhW
+ .text          0x0000000082008404        0x0 /tmp/tmp.kZFylVMBoy
  *(.text.*)
  *(.stub)
                 0x0000000082009000                . = ALIGN (0x1000)
@@ -238,7 +238,7 @@ LOAD /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/lib/gcc/aarch64-kos/9
                 0x000000008200d0f8                fbConsole
                 0x000000008200d138                font8x16Psf
                 0x000000008200fbf0                uartHw
- .data          0x000000008200fdb0        0x0 /tmp/tmp.sIYjKsxkhW
+ .data          0x000000008200fdb0        0x0 /tmp/tmp.kZFylVMBoy
  *(.data.rel)
  *(.data.rel.local)
  *(.got.plt)
@@ -266,7 +266,7 @@ LOAD /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/lib/gcc/aarch64-kos/9
  *fill*         0x000000008207f170      0xe90 
                 0x0000000082080000                __RomfsBegin = .
  *(.romfs)
- .romfs         0x0000000082080000   0x283000 /tmp/tmp.sIYjKsxkhW
+ .romfs         0x0000000082080000   0x283000 /tmp/tmp.kZFylVMBoy
  *(.romfs.*)
                 0x0000000082303000                __RomfsEnd = .
                 0x0000000082303000                . = ALIGN (0x1000)
@@ -295,7 +295,7 @@ LOAD /opt/KasperskyOS-Community-Edition-1.1.1.13/toolchain/lib/gcc/aarch64-kos/9
                 0x0000000082307000                InitialStack
                 0x0000000082307028                fbBase
                 0x0000000082307050                realFbBase
- .bss           0x000000008230f190        0x0 /tmp/tmp.sIYjKsxkhW
+ .bss           0x000000008230f190        0x0 /tmp/tmp.kZFylVMBoy
  *(COMMON)
  *(.sbss)
  *(.scommon)
