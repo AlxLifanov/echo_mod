@@ -80,6 +80,6 @@ client/CMakeFiles/ClientExec.dir/src/client.c.o
  /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/rtl/assert.h
  /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/services/task/scp.h
  /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/rtl/random.h
- /home/user/echo_mod/build/_headers_/echo/Server.edl.h
+ /home/user/echo_mod/build/_headers_/echo/IPing.idl.h
  /opt/KasperskyOS-Community-Edition-1.1.1.13/sysroot-aarch64-kos/include/assert.h
 

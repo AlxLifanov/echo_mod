@@ -1,0 +1,33 @@
+[Server] Starting cycle. Press Ctrl-X to stop me.
+[Client] Starting cycle.
+[Client] sending value = 777
+[Server] request 777, result 780
+[Client] received result = 780
+[Client] sending value = 780
+[Server] request 780, result 783
+[Client] received result = 783
+[Client] sending value = 783
+[Server] request 783, result 786
+[Client] received result = 786
+[Client] sending value = 786
+[Server] request 786, result 789
+[Client] received result = 789
+[Client] sending value = 789
+[Server] request 789, result 792
+[Client] received result = 792
+[Client] sending value = 792
+[Server] request 792, result 795
+[Client] received result = 795
+[Client] sending value = 795
+[Server] request 795, result 798
+[Client] received result = 798
+[Client] sending value = 798
+[Server] request 798, result 801
+[Client] received result = 801
+[Client] sending value = 801
+[Server] request 801, result 804
+[Client] received result = 804
+[Client] sending value = 804
+[Server] request 804, result 807
+[Client] received result = 807
+[Client] Terminating.

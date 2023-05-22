@@ -22,8 +22,6 @@ int main(int argc, const char *argv[])
     struct echo_IPing_proxy proxy;
     int i;
 
-    fprintf(stderr, "Hello I'm client\n");
-
     /* Получаем у Локатора хендл IPC, ведущего к серверу.
      * "server_connection" - имя соединения указано в init.yaml. */
     Handle handle = ServiceLocatorConnect("server_connection");
@@ -48,7 +46,9 @@ int main(int argc, const char *argv[])
     /* Декларируем структуры запроса и ответа, определенные в заголовках сервера */
     echo_IPing_FPing_req req;
     echo_IPing_FPing_res res;
-    
+
+    fprintf(stderr, "[Client] Starting cycle.\n");
+
     /* Рабочий цикл клиента. */
     req.value = EXAMPLE_VALUE_TO_SEND;
     for (i = 0; i < 10; ++i)
@@ -73,6 +73,8 @@ int main(int argc, const char *argv[])
         else
             fprintf(stderr, "Failed to call echo_IPing_FPing()\n");
     }
+
+    fprintf(stderr, "[Client] Terminating.\n");
 
     return EXIT_SUCCESS;
 }

@@ -76,7 +76,7 @@ int main(void)
     echo_Server_entity entity;
     echo_Server_entity_init(&entity, &component);
 
-    fprintf(stderr, "Hello I'm server\n");
+    fprintf(stderr, "[Server] Starting cycle. Press Ctrl-C to stop me.\n");
 
     /* Рабочий цикл обработки. */
     do
